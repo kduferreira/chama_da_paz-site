@@ -1,0 +1,15 @@
+.principal ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão do <ul> */
+    margin: 0; /* Remove a margem padrão do <ul> */
+    display: flex; /* Utiliza o modelo de layout Flexbox */
+    justify-content: flex-start; /* Alinha os itens à esquerda por padrão */
+}
+
+.principal ul app-menu-bar {
+    margin-right: 20px; /* Espaçamento entre o app-menu-bar e app-menu-login */
+}
+
+.principal ul app-menu-login {
+    margin-left: auto; /* Alinha o app-menu-login à direita */
+}
