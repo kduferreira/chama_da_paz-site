@@ -1,0 +1,13 @@
+.menu-container >ul {
+    display: flex;
+    flex-direction: row; /* Elementos lado a lado */
+    gap: 10px; /* Espaçamento entre os componentes */
+    align-items: center; /* Alinhamento vertical opcional */
+  }
+  ul {
+    list-style-type: none; /* Remove os pontos */
+    padding: 0; /* Remove o recuo padrão (opcional) */
+    margin: 0; /* Remove a margem padrão (opcional) */
+  }
+  
+  

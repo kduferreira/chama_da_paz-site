@@ -1,0 +1,12 @@
+.menu-container {
+    display: flex;
+    justify-content: space-between; /* Posiciona os itens nas extremidades */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 0 20px; /* Espaçamento lateral opcional */
+  }
+  ul {
+    list-style-type: none; /* Remove os pontos */
+    padding: 0; /* Remove o recuo padrão (opcional) */
+    margin: 0; /* Remove a margem padrão (opcional) */
+  }
+  

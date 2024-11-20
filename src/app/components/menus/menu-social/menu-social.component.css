@@ -1,0 +1,6 @@
+ul {
+    list-style-type: none; /* Remove os pontos */
+    padding: 0; /* Remove o recuo padrão (opcional) */
+    margin: 0; /* Remove a margem padrão (opcional) */
+  }
+  
