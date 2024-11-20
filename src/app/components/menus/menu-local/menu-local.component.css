@@ -10,4 +10,7 @@
     margin: 0; /* Remove a margem padrão (opcional) */
   }
   
-  
+  ul li img {
+    width: 25px; /* Define a largura */
+    height: 25px; /* Define a altura */
+  }

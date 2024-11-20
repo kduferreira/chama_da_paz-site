@@ -1,6 +1,10 @@
 ul {
-    list-style-type: none; /* Remove os pontos */
-    padding: 0; /* Remove o recuo padrão (opcional) */
-    margin: 0; /* Remove a margem padrão (opcional) */
-  }
-  
+  list-style-type: none; /* Remove os pontos */
+  padding: 0; /* Remove o recuo padrão */
+  margin: 0; /* Remove a margem padrão */
+}
+
+ul li img {
+  width: 26px; /* Define a largura */
+  height: 25px; /* Define a altura */
+}
