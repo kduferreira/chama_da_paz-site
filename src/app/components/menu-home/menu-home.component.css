@@ -5,6 +5,7 @@
     display: flex; /* Configura o modelo Flexbox */
     align-items: center; /* Alinha os itens verticalmente */
     justify-content: space-between; /* Espaça os itens ao máximo */
+   color: #FFFFFF;
   }
   
   .principal ul li {
@@ -26,7 +27,7 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 2em;
-
+    color: #FFFFFF;
 
 }
 .home-about__pedido{
@@ -42,7 +43,7 @@
     flex-grow: 1;
     flex-shrink: 1;
     align-self: auto;
-
+    color: #FFFFFF;
 }
 .home-about__pedido > button {
     font-weight: bold;

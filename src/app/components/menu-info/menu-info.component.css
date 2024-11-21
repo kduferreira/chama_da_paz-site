@@ -3,6 +3,7 @@
     justify-content: space-between; /* Posiciona os itens nas extremidades */
     align-items: center; /* Alinha os itens verticalmente */
     padding: 0 20px; /* Espaçamento lateral opcional */
+    background-color: #1F1F1D;
   }
   ul {
     list-style-type: none; /* Remove os pontos */

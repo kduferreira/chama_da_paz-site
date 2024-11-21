@@ -1,0 +1,51 @@
+body {
+    background-color: #222; /* Fundo escuro */
+    font-family: Arial, sans-serif;
+  }
+  
+  .reservation-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre os elementos */
+    padding: 20px;
+    background-color: #fff; /* Fundo branco */
+    border-radius: 50px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 900px;
+    margin: 50px auto; /* Centraliza na tela */
+  }
+  
+  .reservation-field {
+    flex: 1; /* Cada campo ocupa o mesmo espaço */
+  }
+  
+  .reservation-field label span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #444; /* Cor do texto */
+  }
+  
+  .reservation-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .reserve-button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    border-radius: 50px; /* Botão arredondado */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reserve-button:hover {
+    background-color: #444; /* Fundo mais claro ao passar o mouse */
+  }
+  
