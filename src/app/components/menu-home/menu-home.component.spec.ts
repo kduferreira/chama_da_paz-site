@@ -6,12 +6,10 @@ describe('MenuHomeComponent', () => {
   let component: MenuHomeComponent;
   let fixture: ComponentFixture<MenuHomeComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [MenuHomeComponent]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [MenuHomeComponent]
+    });
     fixture = TestBed.createComponent(MenuHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

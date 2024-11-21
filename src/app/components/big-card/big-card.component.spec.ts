@@ -6,12 +6,10 @@ describe('BigCardComponent', () => {
   let component: BigCardComponent;
   let fixture: ComponentFixture<BigCardComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BigCardComponent]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [BigCardComponent]
+    });
     fixture = TestBed.createComponent(BigCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

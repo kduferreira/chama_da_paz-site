@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReservarComponent } from './reservar.component';
+import { CadastroComponent } from './cadastro.component';
 
-describe('ReservarComponent', () => {
-  let component: ReservarComponent;
-  let fixture: ComponentFixture<ReservarComponent>;
+describe('CadastroComponent', () => {
+  let component: CadastroComponent;
+  let fixture: ComponentFixture<CadastroComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ReservarComponent]
+      declarations: [CadastroComponent]
     });
-    fixture = TestBed.createComponent(ReservarComponent);
+    fixture = TestBed.createComponent(CadastroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
