@@ -7,7 +7,20 @@
 
     <div class="form-login">
         <input class="input-text" type="email" placeholder="Email">
-        <input class="input-text" type="password" placeholder="Senha" >
+    
+        <div class="olho-magico">
+            <input 
+              [type]="isPasswordVisible1 ? 'text' : 'password'" 
+              id="password" 
+              placeholder="Senha" 
+             
+            >
+            <button 
+              type="button" 
+              (click)="togglePasswordVisibility()" 
+              >
+            </button>
+          </div>
 
         <button>Login</button>
     </div>

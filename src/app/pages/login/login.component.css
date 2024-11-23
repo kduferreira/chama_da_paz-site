@@ -38,3 +38,40 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+
+.olho-magico{
+    border: 1px solid black;
+    margin-bottom: 1em;
+    display: flex;
+    border-radius: 10px;
+  
+}
+
+
+.olho-magico input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+   padding: 0.5em;
+    width: 100%;
+    font-size: 20px;
+    margin-right: none;
+    border: none;
+    border-radius: 0;
+}
+
+
+.olho-magico input:focus {
+    outline: none;
+   
+}
+
+
+
+
+.olho-magico button{ 
+    border: none;
+ 
+    border-radius: 0;
+}

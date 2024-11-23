@@ -9,8 +9,35 @@
         <input class="input-text" type="text" placeholder="Nome">
         <input class="input-text" type="text" placeholder="Sobrenome">
         <input class="input-text" type="email" placeholder="Email">
-        <input class="input-text" type="password" placeholder="Senha">
-        <input class="input-text" type="password" placeholder="Confirmar Senha" >
+        <div class="olho-magico">
+            <input 
+              [type]="isPasswordVisible1 ? 'text' : 'password'" 
+              id="password" 
+              placeholder="Senha" 
+             
+            >
+            <button 
+              type="button" 
+              (click)="togglePasswordVisibility()" 
+              >
+            </button>
+          </div>
+          <div class="olho-magico">
+            <input 
+              [type]="isPasswordVisible2 ? 'text' : 'password'" 
+              id="password" 
+              placeholder="Confirmar Senha" 
+             
+            >
+            <button 
+              type="button" 
+              (click)="togglePasswordVisibility2()" 
+              >
+            </button>
+          </div>
+
+        
+        
 
         <button>Cadastrar</button>
     </div>
