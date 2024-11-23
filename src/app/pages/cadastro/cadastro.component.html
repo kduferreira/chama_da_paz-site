@@ -6,13 +6,16 @@
     </div>
 
     <div class="form-cadastro">
-        <input class="input-text" type="text" placeholder="Nome">
-        <input class="input-text" type="text" placeholder="Sobrenome">
-        <input class="input-text" type="email" placeholder="Email">
+        <input [(ngModel)]="usuario.nome" class="input-text" type="text" placeholder="Nome" >
+        <input [(ngModel)]="usuario.sobrenome" class="input-text" type="text" placeholder="Sobrenome">
+        <input [(ngModel)]="usuario.telefone" class="input-text" type="text" placeholder="Telefone">
+
+        <input [(ngModel)]="usuario.email" class="input-text" type="email" placeholder="Email">
         <div class="olho-magico">
             <input 
+            [(ngModel)]="usuario.senha"
               [type]="isPasswordVisible1 ? 'text' : 'password'" 
-              id="password" 
+             
               placeholder="Senha" 
              
             >
@@ -25,7 +28,7 @@
           <div class="olho-magico">
             <input 
               [type]="isPasswordVisible2 ? 'text' : 'password'" 
-              id="password" 
+            
               placeholder="Confirmar Senha" 
              
             >
@@ -39,7 +42,7 @@
         
         
 
-        <button>Cadastrar</button>
+        <button (click)="onSubmit()">Cadastrar</button>
     </div>
 
    

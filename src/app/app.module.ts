@@ -21,6 +21,8 @@ import { MenuLocalComponent } from './components/menus/menu-local/menu-local.com
 import { MenuLogoComponent } from './components/menus/menu-logo/menu-logo.component';
 import { MenuSocialComponent } from './components/menus/menu-social/menu-social.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { LoginComponent } from './pages/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
