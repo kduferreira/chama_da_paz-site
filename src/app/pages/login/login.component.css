@@ -1,0 +1,40 @@
+.campo-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+  
+}
+
+.texto-login h2{
+    font-size: 35px;
+}
+.texto-login p{
+    font-size: 25px;
+}
+
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+   
+   
+   
+}
+
+.input-text{
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 16em;
+}
+
+.form-login button{
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
