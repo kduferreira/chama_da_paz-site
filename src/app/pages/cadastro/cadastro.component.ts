@@ -11,6 +11,8 @@ export class CadastroComponent {
   isPasswordVisible1 = false;
   isPasswordVisible2 = false;
 
+
+
   nome:string=""
   
   usuario = {
@@ -18,7 +20,8 @@ export class CadastroComponent {
     sobrenome:'',
     email: '',
     telefone:'',
-    senha: ''
+    senha: '',
+    confirmarSenha:''
   };
 
   logUsuario(): void {
@@ -39,12 +42,30 @@ export class CadastroComponent {
   }
 
 
-
   onSubmit(): void {
+    // Validação: verifica se a senha e a confirmação são iguais
+    if (this.usuario.senha !== this.usuario.confirmarSenha) {
+      alert('As senhas não coincidem!');
+      return; // Interrompe o processo de envio
+    }
+
+
+
+
     this.cadastroService.cadastrarUsuario(this.usuario).subscribe(
       (response) => {
         console.log('Cadastro realizado com sucesso:', response);
-        alert('Usuário cadastrado com sucesso!');
+      
+         alert('Usuário cadastrado com sucesso!');
+  this.usuario = {
+          nome: '',
+          sobrenome:'',
+          email: '',
+          telefone:'',
+          senha: '', 
+          confirmarSenha:''
+        }
+      
       },
       (error) => {
         console.error('Erro ao cadastrar usuário:', error);

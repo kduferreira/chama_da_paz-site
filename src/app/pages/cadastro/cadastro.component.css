@@ -35,6 +35,16 @@
     cursor: pointer;
 }
 
+.confirm-button:hover{
+    
+    background-color: orange;
+
+    font-size: 21px;
+    color: white;
+    transition: 0.1s;
+}
+
+
 /* Ajustes para o botão dentro do campo */
 
 .olho-magico{
