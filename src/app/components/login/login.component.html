@@ -1,14 +1,18 @@
 <div class="campo-login">
 
     <div class="texto-login">
-         <h2>Faça seu Login</h2>
-         <p>Ainda não tem conta? <a routerLink="/cadastro">Cadastre-se</a></p>
+        <img src="../../../assets/images/icon-chave.png" alt="">
+         <h2>FAZER LOGIN</h2>
     </div>
 
     <div class="form-login">
-        <input class="input-text" type="email" placeholder="Email">
-    
+        <label for="">EMAIL</label>
+        <input class="input-text" type="email" placeholder="DIGITE SEU EMAIL">
+
+        <label for="">SENHA</label>
         <div class="olho-magico">
+
+          
             <input 
               [type]="isPasswordVisible1 ? 'text' : 'password'" 
               id="password" 
@@ -22,7 +26,12 @@
             </button>
           </div>
 
-        <button>Login</button>
+          <div class="button">
+
+            <button>ENTRAR</button>
+            <a href="">ESQUECEU A SENHA</a>
+          </div>
+
     </div>
 
    

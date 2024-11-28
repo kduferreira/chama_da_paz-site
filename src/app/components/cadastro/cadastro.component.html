@@ -1,0 +1,87 @@
+<div class="campo-cadastro">
+
+    <div class="texto-cadastro">
+        <img src="../../../assets/images/icon-user.png" alt="icone usuario">
+         <h1>AINDA  NÃO SOU CADASTRADO </h1>
+    </div>
+
+    <div class="form-cadastro">
+        <label for="">NOME COMPLETO*</label>
+        <input [(ngModel)]="usuario.nome" class="input-text" type="text" placeholder="DIGITE O SEU NOME" >
+
+        <label for="">DATA DE NASCIMENTO*</label>
+        <input class="input-text" type="text" placeholder="">
+
+        <label for="">SEXO</label>
+        <input class="input-text" type="text" placeholder="SELECIONE SE SEXO">
+
+        <label for="">CPF*</label>
+        <input class="input-text" type="text" placeholder="000.000.000-00">
+
+        <label for="">TELEFONE/CELULAR*</label>
+        <input [(ngModel)]="usuario.telefone" class="input-text" type="text" placeholder="Telefone">
+
+        <label for="">EMAIL*</label>
+        <input [(ngModel)]="usuario.email" class="input-text" type="email" placeholder="Email">
+
+
+        <div class="olho-magico">
+            <input 
+            [(ngModel)]="usuario.senha"
+              [type]="isPasswordVisible1 ? 'text' : 'password'" 
+             
+              placeholder="Senha" 
+             
+            >
+            <button 
+              type="button" 
+              (click)="togglePasswordVisibility()" 
+              >
+            </button>
+          </div>
+          <div class="olho-magico">
+            <input 
+            [(ngModel)]="usuario.confirmarSenha"
+              [type]="isPasswordVisible2 ? 'text' : 'password'" 
+            
+              placeholder="Confirmar Senha" 
+             
+            >
+            <button 
+              type="button" 
+              (click)="togglePasswordVisibility2()" 
+              >
+            </button>
+          </div>
+
+        
+        
+
+          <div class="texto-cadastro">
+            <h1>ENDEREÇO </h1>
+          </div>
+
+          <label for="">CIDADE/UF*</label>
+          <input class="input-text" type="text" placeholder="SÃO LUIS/MA">
+
+          <label for="">ENDEREÇO*</label>
+          <input class="input-text" type="text" placeholder="DIGITE O ENDEREÇO DE ENTREGA">
+
+          <label for="">NUMERO*</label>
+          <input class="input-text" type="text" placeholder="000">
+
+          <label for="">APTO/COMPLEMENTO*</label>
+          <input class="input-text" type="text" placeholder="APTO/QUADRA">
+
+          <label for="">BAIRRO*</label>
+          <input class="input-text" type="text" placeholder="SELECIONE SEU BAIRRO">
+
+
+
+
+        <button class="confirm-button" (click)="onSubmit()">Cadastrar</button>
+    </div>
+
+
+
+</div>
