@@ -34,9 +34,10 @@
     border-radius: 5px;
     border: none;
     background-color: #CAC6C6;
+    font-size:  20px;
 }
 
-
+/* tira o border do input selecionado */
 .input-text:focus-visible{
    
     outline: none; 
@@ -71,22 +72,17 @@
  }
 
 
-.form-cadastro button{
-    padding: 1em;
-    font-size: 20px;
+.confirm-button{
+    margin-top: 0.5em;
+    background-color: #ffcf00;
+    padding: 0.5em;
+    font-size: 40px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
+    border: none;
 }
 
-.confirm-button:hover{
-    
-    background-color: orange;
-
-    font-size: 21px;
-    color: white;
-    transition: 0.1s;
-}
 
 
 /* Ajustes para o botão dentro do campo */

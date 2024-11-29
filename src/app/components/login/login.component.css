@@ -3,7 +3,7 @@
     flex-direction: column;
    
     margin-top: 5em;
-    
+    width: 30em;
     border: 1px solid black;
 
   
@@ -37,54 +37,62 @@
 }
 
 .input-text{
-    padding: 0.5em;
-    margin-bottom: 1em;
-    font-size: 20px;
+   
+    font-size: 15px;
     border-radius: 5px;
-    width: 16em;
+    border: none;
+    background-color: #CAC6C6;
+    font-size:  20px;
 }
 
-.form-login button{
-    padding: 1em;
+.input-text:focus-visible{
+   
+    outline: none; 
+  
+}
+
+.button button{
+    padding: 0.5em 1.5em;
     font-size: 20px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #ffcf00;
+    border: none;
+    margin-top: 1em;
+    margin-right: 1.5em;
+}
+
+.button a{
+    color: black;
+    text-decoration: none;
+}
+
+.button a:hover{
+    color: blue;
+    transition: 0.2s;
 }
 
 
-.olho-magico{
-    border: 1px solid black;
-    margin-bottom: 1em;
+
+
+
+.fundo-input{
     display: flex;
+    flex-direction: column;
+    background-color: #CAC6C6;
+    padding-left: 1em;
     border-radius: 10px;
-  
-}
-
-
-.olho-magico input {
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-   padding: 0.5em;
-    width: 100%;
-    font-size: 20px;
-    margin-right: none;
-    border: none;
-    border-radius: 0;
-}
-
-
-.olho-magico input:focus {
-    outline: none;
-   
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    
 }
 
 
 
-
-.olho-magico button{ 
-    border: none;
- 
-    border-radius: 0;
-}
+.fundo-input label{
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+ }

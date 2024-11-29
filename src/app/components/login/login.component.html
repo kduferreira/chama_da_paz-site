@@ -1,4 +1,4 @@
-<div class="campo-login">
+<form class="campo-login">
 
     <div class="texto-login">
         <img src="../../../assets/images/icon-chave.png" alt="">
@@ -6,25 +6,28 @@
     </div>
 
     <div class="form-login">
+
+      <div class="fundo-input">
+
         <label for="">EMAIL</label>
         <input class="input-text" type="email" placeholder="DIGITE SEU EMAIL">
 
-        <label for="">SENHA</label>
-        <div class="olho-magico">
+      </div>
 
-          
-            <input 
-              [type]="isPasswordVisible1 ? 'text' : 'password'" 
-              id="password" 
-              placeholder="Senha" 
-             
-            >
-            <button 
-              type="button" 
-              (click)="togglePasswordVisibility()" 
-              >
-            </button>
-          </div>
+      <div class="fundo-input">
+
+
+        <label for="">SENHA</label>
+        <input class="input-text"
+          [type]="isPasswordVisible1 ? 'text' : 'password'" 
+          id="password" 
+          placeholder="Senha" >
+      </div>
+      
+
+
+        
+        
 
           <div class="button">
 
@@ -37,4 +40,4 @@
    
 
 
-</div>
+</form>
