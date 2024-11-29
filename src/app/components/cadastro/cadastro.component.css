@@ -29,11 +29,41 @@
 }
 
 .input-text{
-    padding: 0.5em;
-    margin-bottom: 1em;
-    font-size: 20px;
+   
+    font-size: 15px;
     border-radius: 5px;
+    border: none;
+    background-color: #CAC6C6;
 }
+
+
+.input-text:focus-visible{
+   
+    outline: none; 
+  
+}
+
+
+
+.fundo-input{
+    display: flex;
+    flex-direction: column;
+    background-color: #CAC6C6;
+    padding-left: 1em;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.fundo-input label{
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+ }
+
+ .primeira-linha{
+    display: flex;
+ }
+
 
 .form-cadastro button{
     padding: 1em;

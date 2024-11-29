@@ -6,24 +6,52 @@
     </div>
 
     <div class="form-cadastro">
+
+      <div class="fundo-input campo1">
         <label for="">NOME COMPLETO*</label>
         <input [(ngModel)]="usuario.nome" class="input-text" type="text" placeholder="DIGITE O SEU NOME" >
+      </div>
 
-        <label for="">DATA DE NASCIMENTO*</label>
-        <input class="input-text" type="text" placeholder="">
+    
+        <div class="fundo-input campo2">
+          <label for="">DATA DE NASCIMENTO*</label>
+          <input class="input-text" type="text" placeholder="">
 
-        <label for="">SEXO</label>
-        <input class="input-text" type="text" placeholder="SELECIONE SE SEXO">
+        </div>
 
-        <label for="">CPF*</label>
-        <input class="input-text" type="text" placeholder="000.000.000-00">
+        <div class="fundo-input">
+          <label for="">SEXO</label>
+          <input class="input-text" type="text" placeholder="SELECIONE SE SEXO">
 
-        <label for="">TELEFONE/CELULAR*</label>
-        <input [(ngModel)]="usuario.telefone" class="input-text" type="text" placeholder="Telefone">
+        </div>
 
-        <label for="">EMAIL*</label>
-        <input [(ngModel)]="usuario.email" class="input-text" type="email" placeholder="Email">
+        <div class="fundo-input">
+          <label for="">CPF*</label>
+          <input class="input-text" type="text" placeholder="000.000.000-00">
 
+        </div>
+
+        <div class="fundo-input">
+          <label for="">TELEFONE/CELULAR*</label>
+          <input [(ngModel)]="usuario.telefone" class="input-text" type="text" placeholder="Telefone">
+
+        </div>
+
+        <div class="fundo-input">
+           <label for="">EMAIL*</label>
+          <input [(ngModel)]="usuario.email" class="input-text" type="email" placeholder="Email">
+
+        </div>
+
+
+
+    
+
+        
+       
+        
+        
+       
 
         <div class="olho-magico">
             <input 
@@ -61,25 +89,48 @@
             <h1>ENDEREÇO </h1>
           </div>
 
-          <label for="">CIDADE/UF*</label>
-          <input class="input-text" type="text" placeholder="SÃO LUIS/MA">
+          <div class="fundo-input">
+            <label for="">CIDADE/UF*</label>
+            <input class="input-text" type="text" placeholder="SÃO LUIS/MA">
 
-          <label for="">ENDEREÇO*</label>
-          <input class="input-text" type="text" placeholder="DIGITE O ENDEREÇO DE ENTREGA">
+          </div>
 
-          <label for="">NUMERO*</label>
-          <input class="input-text" type="text" placeholder="000">
+          <div class="fundo-input">
 
-          <label for="">APTO/COMPLEMENTO*</label>
-          <input class="input-text" type="text" placeholder="APTO/QUADRA">
+            <label for="">ENDEREÇO*</label>
+            <input class="input-text" type="text" placeholder="DIGITE O ENDEREÇO DE ENTREGA">
+          </div>
 
-          <label for="">BAIRRO*</label>
-          <input class="input-text" type="text" placeholder="SELECIONE SEU BAIRRO">
+          <div class="fundo-input">
+
+            <label for="">NUMERO*</label>
+            <input class="input-text" type="text" placeholder="000">
+
+          </div>
+
+          <div class="fundo-input">
+
+            <label for="">APTO/COMPLEMENTO*</label>
+            <input class="input-text" type="text" placeholder="APTO/QUADRA">
+
+          </div>
+
+
+          <div class="fundo-input">
+
+  
+            <label for="">BAIRRO*</label>
+            <input class="input-text" type="text" placeholder="SELECIONE SEU BAIRRO">
+
+
+          </div>  
+
+
+          
 
 
 
-
-        <button class="confirm-button" (click)="onSubmit()">Cadastrar</button>
+        <button class="confirm-button" (click)="onSubmit()">CADASTRAR E FINALIZAR</button>
     </div>
 
 
