@@ -15,9 +15,20 @@
 .texto-cadastro h1{
     display: flex;
     flex-direction: row;
-    font-size: 30px;
+    font-size: 35px;
     text-align: start;
-    margin-left: 0.5em;
+    justify-content: center;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+.texto-cadastro img{
+    width: 2.8em;
+    height: 2.8em;
+    margin-right: 1em;
+
 }
 
 
@@ -75,12 +86,15 @@
 .confirm-button{
     margin-top: 0.5em;
     background-color: #ffcf00;
-    padding: 0.5em;
-    font-size: 40px;
+    padding: 0.2em;
+    font-size: 55px;
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
     border: none;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    font-style: normal;
 }
 
 

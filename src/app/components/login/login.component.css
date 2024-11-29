@@ -9,15 +9,28 @@
   
 }
 .texto-login {
+    display: flex;
+    justify-content: start;
+    align-items: center;
     background-color: #FFCF00;
-    padding: 1em;
+    padding: 0.5em;
     display: flex;
     flex-direction: row;
+}
+.texto-login img{
+    
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.5em;
 }
 
 .texto-login h2{
     margin-left: 0.5em;
-    font-size: 35px;
+    font-size: 40px;
+
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    font-style: normal;
 }
 .texto-login p{
     font-size: 25px;

@@ -1,4 +1,5 @@
 .home-pedidos{
+    margin-top: 3em;
     border: 1px solid black;
 }
 
@@ -8,6 +9,20 @@
     flex-direction: row;
     background-color: #FFCF00;
     align-items: center;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.title-pedidos h1{
+   margin-left: 0.5em;
+   font-size: 40px;
+}
+
+.title-pedidos img{
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 0.5em;
 }
 
 .item{
