@@ -1,0 +1,37 @@
+.flavors {
+    padding: 20px;
+    color: white;
+    background-color: #111;
+    .title {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  
+    .flavors-list {
+      display: flex;
+      justify-content: space-around;
+  
+      .flavor-item {
+        text-align: center;
+        img {
+          width: 200px;
+          border-radius: 50%;
+        }
+        h3 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        button {
+          background-color: #f9a826;
+          border: none;
+          color: white;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
