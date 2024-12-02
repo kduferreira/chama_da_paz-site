@@ -1,0 +1,75 @@
+/* Letreiro */
+.letreiro {
+    background-color: #f9a826;
+    color: #111;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .letreiro span {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+  }
+  
+  /* Animação de rolagem para o letreiro */
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Estilos do banner e imagens */
+  .monte-pedido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .banner {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .banner-title {
+    font-size: 2.5rem;
+    color: #f9a826;
+    margin-bottom: 10px;
+  }
+  
+  .banner-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .order-button {
+    background-color: #f9a826;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .images-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .images-container img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  

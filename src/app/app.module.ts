@@ -27,6 +27,7 @@ import { AcessoUsuarioComponent } from './pages/acesso-usuario/acesso-usuario.co
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { CarrinhoPedidosComponent } from './components/carrinho-pedidos/carrinho-pedidos.component';
+import { MonteComponent } from './monte/monte.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { CarrinhoPedidosComponent } from './components/carrinho-pedidos/carrinho
     MenuSocialComponent,
     LoginComponent,
     AcessoUsuarioComponent,
-    CarrinhoPedidosComponent
+    CarrinhoPedidosComponent,
+    MonteComponent
   ],
   imports: [
     BrowserModule,
