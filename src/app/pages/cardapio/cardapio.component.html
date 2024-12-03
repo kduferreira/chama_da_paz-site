@@ -1,1 +1,22 @@
-<p>cardapio works!</p>
+<div class="cardapio">
+    <h2 class="title">NOSSOS SABORES</h2>
+    <div class="menu-items">
+      <div class="menu-column">
+        <div class="menu-item" *ngFor="let item of saboresEsquerda">
+          <h3>{{ item.nome }} <span class="preco">{{ item.preco }}</span></h3>
+          <p>{{ item.descricao }}</p>
+        </div>
+      </div>
+      <div class="menu-column">
+        <div class="menu-item" *ngFor="let item of saboresDireita">
+          <h3>{{ item.nome }} <span class="preco">{{ item.preco }}</span></h3>
+          <p>{{ item.descricao }}</p>
+        </div>
+      </div>      
+    </div>
+    <div class="order-button">
+      <button>PEÇA AGORA</button>
+      <p class="note">* Ofertas disponíveis apenas para retirada e entrega.</p>
+    </div>
+  </div>
+  

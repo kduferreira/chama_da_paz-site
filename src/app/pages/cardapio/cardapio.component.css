@@ -1,0 +1,61 @@
+.cardapio {
+    background-color: #111;
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .menu-column {
+    width: 45%;
+  }
+  
+  .menu-item {
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-item p {
+    font-size: 1rem;
+  }
+  
+  .preco {
+    color: #f9a826;
+  }
+  
+  .order-button {
+    margin-top: 30px;
+  }
+  
+  .order-button button {
+    background-color: #f9a826;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .note {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  
