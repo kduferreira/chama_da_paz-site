@@ -9,6 +9,10 @@
     
 }
 
+.container-nav{
+    background-color: #1F1F1D;
+}
+
 .coluna-login-pedidos{
     display: flex;
     flex-direction: column;
