@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5em;
+    
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.navbar ul li{
+    margin: 2em 1em;
+
+}
+.navbar a{
+    text-decoration: none;
+
+}

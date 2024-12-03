@@ -1,18 +1,20 @@
 body {
-    background-color: #222; /* Fundo escuro */
+     /* Fundo escuro */
     font-family: Arial, sans-serif;
   }
   
   .reservation-bar {
     display: flex;
     align-items: center;
+   justify-content: center;
     gap: 20px; /* Espaço entre os elementos */
-    padding: 20px;
+    padding: 2em 5em;
     background-color: #fff; /* Fundo branco */
-    border-radius: 50px; /* Bordas arredondadas */
+    border-radius: 100px; /* Bordas arredondadas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
     max-width: 900px;
-    margin: 50px auto; /* Centraliza na tela */
+
+    
   }
   
   .reservation-field {
