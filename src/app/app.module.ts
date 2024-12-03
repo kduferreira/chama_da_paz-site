@@ -13,7 +13,7 @@ import { DaCasaComponent } from './pages/da-casa/da-casa.component';
 import { EspecialidadesComponent } from './pages/especialidades/especialidades.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MaioresPedidosComponent } from './pages/maiores-pedidos/maiores-pedidos.component';
-import { RodapeComponent } from './pages/rodape/rodape.component';
+import { RodapeComponent } from './components/rodape/rodape.component';
 import { SaboresComponent } from './pages/sabores/sabores.component';
 import { MenuBarComponent } from './components/menu/menu-bar/menu-bar.component';
 import { MenuLoginComponent } from './components/menu/menu-login/menu-login.component';
