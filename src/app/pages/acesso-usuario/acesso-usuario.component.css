@@ -2,5 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #D9D9D9;
+    
+}
+
+.coluna-login-pedidos{
+    display: flex;
+    flex-direction: column;
+}
+.pedidos{
+    height: 100%;
 }
