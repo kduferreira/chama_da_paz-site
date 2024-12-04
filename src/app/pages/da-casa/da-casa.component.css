@@ -1,6 +1,6 @@
 .especialidade-container {
   display: flex;
-  background-color: #000;
+  background-color: #1E1E1C;
   color: #fff;
   height: 100%; /* Ajuste conforme necessário */
 }
@@ -45,5 +45,5 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
+  
 }

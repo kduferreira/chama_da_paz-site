@@ -1,75 +1,92 @@
 /* Letreiro */
 .letreiro {
-    background-color: #f9a826;
-    color: #111;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 2.5rem;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
+  background-color: #f9a826;
+  color: #111;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.letreiro span {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+/* Animação de rolagem para o letreiro */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .letreiro span {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  /* Animação de rolagem para o letreiro */
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  /* Estilos do banner e imagens */
-  .monte-pedido {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #111;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .banner {
-    text-align: center;
-    flex: 1;
-  }
-  
-  .banner-title {
-    font-size: 2.5rem;
-    color: #f9a826;
-    margin-bottom: 10px;
-  }
-  
-  .banner-text {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .order-button {
-    background-color: #f9a826;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .images-container {
-    display: flex;
-    gap: 20px;
-    flex: 1;
-  }
-  
-  .images-container img {
-    width: 200px;
-    border-radius: 10px;
-  }
-  
+}
+
+/* Estilos do container principal */
+.monte-pedido {
+  display: flex;
+  align-items: stretch; /* Faz com que os elementos preencham a altura total */
+  justify-content: space-between;
+  background-color: #1E1E1C;
+  color: white;
+  border-radius: 0; /* Remove bordas arredondadas */
+  gap: 0;
+  margin: 0; /* Remove margens adicionais */
+}
+
+/* Estilos das imagens laterais */
+.images-container {
+  width: 33.33%; /* Ocupa exatamente 33,33% da largura */
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Garante que as imagens se estiquem verticalmente */
+}
+
+.images-container img {
+  width: 100%; /* Preenche completamente o container */
+  height: 100%; /* Estica a imagem verticalmente para preencher o container */
+  object-fit: cover; /* Garante que a imagem seja cortada proporcionalmente */
+  border-radius: 0; /* Remove bordas arredondadas */
+}
+
+/* Estilos do banner central */
+.banner {
+  text-align: center;
+  width: 33.33%; /* Ocupa exatamente 33,33% da largura */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  padding: 20px;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  color: #f9a826;
+  margin-bottom: 10px;
+}
+
+.banner-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Botão restaurado ao estilo original */
+.order-button {
+  background-color: #f9a826;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px; /* Botão arredondado */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.order-button:hover {
+  background-color: #d88a1d;
+  transform: scale(1.05); /* Pequeno efeito de crescimento ao passar o mouse */
+}

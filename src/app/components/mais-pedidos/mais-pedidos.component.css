@@ -1,28 +1,59 @@
 .mais-pedidos-container {
-    background-color: #111;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .mais-pedidos-title {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .mais-pedidos-description {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-  
-  .mais-pedidos-lista {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .mais-pedidos-lista li {
-    font-size: 1.2em;
-    margin: 5px 0;
-    color: #ffd700;
-  }
-  
+  display: flex;
+  background-color: #1E1E1C;
+  color: #fff;
+  height: 100%;
+}
+
+.mais-pedidos-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mais-pedidos-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ 
+}
+
+.mais-pedidos-content {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mais-pedidos-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.mais-pedidos-description {
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o texto */
+}
+
+.mais-pedidos-lista {
+ /*  list-style: none; Remove os pontinhos */
+  padding: 0;
+  columns: 2;
+}
+
+.mais-pedidos-lista li {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #facc15;
+  text-align: left; /* Alinha à esquerda */
+}
