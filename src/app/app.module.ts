@@ -24,6 +24,8 @@ import { CarrinhoPedidosComponent } from './components/carrinho-pedidos/carrinho
 import { MonteComponent } from './monte/monte.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,9 @@ import { HeaderComponent } from './components/header/header.component';
     AcessoUsuarioComponent,
     CarrinhoPedidosComponent,
     MonteComponent,
-    HeaderComponent
+    HeaderComponent,
+    
+    MenuBigCardComponent
   ],
   imports: [
     BrowserModule,

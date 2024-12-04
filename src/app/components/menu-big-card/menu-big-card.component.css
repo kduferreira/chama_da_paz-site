@@ -1,0 +1,21 @@
+.card-component{
+    padding: 5em;   
+}
+
+.texto{
+    margin-bottom: 2em;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    font-style: normal;  
+    color: white;  
+}
+
+.button-pedido button{
+    background-color: #ffcf00;
+    padding: 1em;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
