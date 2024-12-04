@@ -1,10 +1,12 @@
 .card-component{
     padding: 5em;   
+  
 }
 
 .texto{
     margin-bottom: 2em;
     font-family: "Oleo Script", system-ui;
+    font-size: 30px;
     font-weight: bold;
     font-style: normal;  
     color: white;  
@@ -12,10 +14,11 @@
 
 .button-pedido button{
     background-color: #ffcf00;
-    padding: 1em;
+    padding: 1em 2em;
     color: white;
     border: none;
     border-radius: 50px;
     font-weight: bold;
+    font-size: 20px;
 }
 

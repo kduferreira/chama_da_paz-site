@@ -1,5 +1,12 @@
 .menu {
-    margin-bottom: 20px; /* Adiciona espaçamento abaixo do app-menu-info */
+    
+    background-color: #222; 
+    background-image: url(../../../assets/images/background-img.png);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    box-shadow: 100px 100px 200px rgba(0, 0, 0, 0.5); /* sombra */
+    padding-bottom: 8em;
   }
   
   .reserva{
