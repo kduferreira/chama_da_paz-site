@@ -1,0 +1,28 @@
+.mais-pedidos-container {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .mais-pedidos-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .mais-pedidos-description {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .mais-pedidos-lista {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .mais-pedidos-lista li {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #ffd700;
+  }
+  

@@ -25,6 +25,7 @@ import { MonteComponent } from './monte/monte.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.component';
+import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.c
     MonteComponent,
     HeaderComponent,
     
-    MenuBigCardComponent
+    MenuBigCardComponent,
+          MaisPedidosComponent
   ],
   imports: [
     BrowserModule,
