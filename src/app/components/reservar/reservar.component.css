@@ -39,7 +39,7 @@ body {
   .reserve-button {
     padding: 15px 30px;
     border: none;
-    background-color: #000; /* Fundo preto */
+    background-color: #1F1F1D; /* Fundo preto */
     color: #fff; /* Texto branco */
     border-radius: 50px; /* Botão arredondado */
     font-size: 16px;

@@ -1,31 +1,60 @@
 .specialties {
-    background-color: #1E1E1C;
-    padding: 20px;
-    color: white;
-    .title {
-      text-align: center;
-      font-size: 2.5rem;
-    }
-    .specialties-content {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-  
-      .specialties-image img {
-        width: 300px;
-      }
-  
-      .specialties-details {
-        .specialty-item {
-          margin: 15px 0;
-          h3 {
-            font-size: 1.5rem;
-          }
-          p {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-  }
-  
+  background-color: #1E1E1C;
+  padding: 40px 20px;
+  color: white; /* Cor padrão branca */
+}
+
+.specialties-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha os itens no topo */
+}
+
+.specialties-image {
+  width: 50%; /* Imagem ocupa 50% */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente a imagem */
+  align-items: center; /* Centraliza verticalmente a imagem */
+}
+
+.specialties-image img {
+  width: 90%; /* Aumenta a largura da imagem */
+  height: auto;
+}
+
+.specialties-details {
+  width: 50%; /* Detalhes ocupam 50% */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os itens */
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+  color: white; /* Título em branco */
+}
+
+.specialty-item {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.specialty-item img.icon {
+  width: 50px; /* Ícones menores */
+  height: 50px;
+}
+
+.specialty-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: white; /* Subtítulos em branco */
+}
+
+.specialty-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white; /* Parágrafos em branco */
+}

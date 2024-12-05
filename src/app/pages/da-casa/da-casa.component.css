@@ -1,3 +1,4 @@
+/* Container geral */
 .especialidade-container {
   display: flex;
   background-color: #1E1E1C;
@@ -45,5 +46,50 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  
+}
+
+/* Letreiro */
+.letreiro {
+  background-color: #440E00;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 3.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.letreiro span {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Galeria de imagens */
+.galeria-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1E1E1C;
+  padding: 20px;
+}
+
+.galeria-container img {
+  width: 18%; /* Cada imagem ocupa 18% para caber 5 imagens */
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-container img:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
