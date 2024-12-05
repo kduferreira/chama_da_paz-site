@@ -16,12 +16,20 @@ export class CadastroComponent {
   nome:string=""
   
   usuario = {
-    nome: '',
-    sobrenome:'',
-    email: '',
-    telefone:'',
-    senha: '',
-    confirmarSenha:''
+    nome: "",
+    sobrenome: "",
+    email: "",
+    telefone: "",
+    senha: "",
+    confirmarSenha: "",
+    dataNascimento: "",
+    sexo: "",
+    cpf: "",
+    endereco: "",
+    cidade: "",
+    numero: "",
+    complemento: "",
+    bairro:""
   };
 
   logUsuario(): void {
@@ -57,13 +65,21 @@ export class CadastroComponent {
         console.log('Cadastro realizado com sucesso:', response);
       
          alert('Usuário cadastrado com sucesso!');
-  this.usuario = {
-          nome: '',
-          sobrenome:'',
-          email: '',
-          telefone:'',
-          senha: '', 
-          confirmarSenha:''
+      this.usuario = {
+          nome: "",
+          sobrenome: "",
+          email: "",
+          telefone: "",
+          senha: "",
+          confirmarSenha: "",
+          dataNascimento: "",
+          sexo: "",
+          cpf: "",
+          endereco: "",
+          cidade: "",
+          numero: "",
+          complemento: "",
+          bairro:""
         }
       
       },
