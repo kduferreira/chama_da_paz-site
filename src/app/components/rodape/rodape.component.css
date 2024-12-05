@@ -1,58 +1,78 @@
-.container-rodape{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
+.container-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 20px 50px;
+  border-top: 1px solid #000000;
 }
 
-.contatos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.contatos p{
-    margin-top: 0.5em;
-}
-
-.social{
-    display: flex;
-   flex-direction: column;
-   justify-content: center; 
-   align-items: center;
-   margin: 2em 5em;
-  
-
-}
-.social img{
-    height: 5.5em;
-    width: 5.5em;
-    margin-bottom: 1em;
+.contatos,
+.atendimento {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.atendimento{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-.atendimento p{
-    margin-top: 0.5em; 
-
+.contatos h2,
+.atendimento h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.copyright{
-    background-color: #FFFFFF;
-    text-align: center;
-    border-top: 1px solid black;
-    
+.contatos p,
+.atendimento p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #000;
 }
 
+.social {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  border-right: 1px solid #000000; /* Linha à direita */
+  border-left: 1px solid #000000;  /* Linha à esquerda */
+}
 
-.copyright p{
-   margin: 1em;
-    
+.social .logo {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes img {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+/* Copyright */
+.copyright {
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px 0;
+  border-top: 1px solid #000000;
+  margin-top: 10px;
+}
+
+.copyright p {
+  margin: 0;
+  color: #000;
 }
