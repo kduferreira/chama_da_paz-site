@@ -16,14 +16,14 @@ import { MenuLocalComponent } from './components/menus/menu-local/menu-local.com
 import { MenuSocialComponent } from './components/menus/menu-social/menu-social.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AcessoUsuarioComponent } from './pages/acesso-usuario/acesso-usuario.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { CarrinhoPedidosComponent } from './components/carrinho-pedidos/carrinho-pedidos.component';
 import { MonteComponent } from './monte/monte.component';
 import { HeaderComponent } from './components/header/header.component';
-
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.component';
 import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.component';
 
@@ -62,9 +62,11 @@ import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxMaskDirective,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [provideNgxMask({})],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

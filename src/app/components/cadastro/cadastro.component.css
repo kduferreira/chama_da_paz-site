@@ -102,9 +102,18 @@
 }
 
 
+.input-empty-caixa{
+    border: 1px solid red;
+   
+    background-color: rgb(255, 207, 207);
+    color: red;
+}
 
-/* Ajustes para o botão dentro do campo */
-
+.input-empty{
+    
+    background-color: rgb(255, 207, 207);
+    
+}
 
 
 

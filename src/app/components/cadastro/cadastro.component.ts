@@ -13,11 +13,9 @@ export class CadastroComponent {
 
 
 
-  nome:string=""
   
   usuario = {
     nome: "",
-    sobrenome: "",
     email: "",
     telefone: "",
     senha: "",
@@ -32,9 +30,27 @@ export class CadastroComponent {
     bairro:""
   };
 
+  showErrors = false; // Variável de controle para exibir os erros
+
+  // Método para verificar se um campo está vazio
+  isFieldEmpty(fieldName: string): boolean {
+    const value = this.usuario[fieldName as keyof typeof this.usuario];
+    return !value || value.trim() === '';
+  }
+
+
+
+  
+  // Método que será chamado ao clicar no botão
+  validateFields(): boolean {
+   return this.showErrors = true; // Ativa a exibição dos erros
+  }
+
+
+  
   logUsuario(): void {
     console.log('Dados do usuário:', this.usuario);
-    console.log(this.nome);
+    
   }
   
   constructor(private cadastroService: CadastroService) {}
@@ -56,10 +72,24 @@ export class CadastroComponent {
       alert('As senhas não coincidem!');
       return; // Interrompe o processo de envio
     }
+    
+
+
+    this.validateFields()
+console.log(this.usuario);
 
 
 
+if(this.validateFields()  && !this.isFieldEmpty("nome")
+  && !this.isFieldEmpty("email") && !this.isFieldEmpty("telefone") 
+&& !this.isFieldEmpty("senha")&& !this.isFieldEmpty("dataNascimento")
+&& !this.isFieldEmpty("sexo")&& !this.isFieldEmpty("telefone")
+&& !this.isFieldEmpty("endereco") && !this.isFieldEmpty("cidade")
+&& !this.isFieldEmpty("numero")&& !this.isFieldEmpty("bairro") ){
 
+
+  console.log("salvando no db");
+  
     this.cadastroService.cadastrarUsuario(this.usuario).subscribe(
       (response) => {
         console.log('Cadastro realizado com sucesso:', response);
@@ -67,7 +97,6 @@ export class CadastroComponent {
          alert('Usuário cadastrado com sucesso!');
       this.usuario = {
           nome: "",
-          sobrenome: "",
           email: "",
           telefone: "",
           senha: "",
@@ -81,6 +110,7 @@ export class CadastroComponent {
           complemento: "",
           bairro:""
         }
+        this.showErrors = false;
       
       },
       (error) => {
@@ -88,6 +118,13 @@ export class CadastroComponent {
         alert('Erro ao realizar o cadastro.');
       }
     );
+}
+  
+  
+
+
+
+  
   }
 
 

@@ -8,9 +8,11 @@
     <div class="form-cadastro">
 
       <div class="linha-juncao"> 
-         <div class="fundo-input">
-          <label for="">NOME COMPLETO*</label>
-          <input [(ngModel)]="usuario.nome" class="input-text" type="text" placeholder="DIGITE O SEU NOME" >
+         <div class="fundo-input" [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('nome') }">
+          <label for="">NOME COMPLETO *</label>
+          <input 
+          [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('nome') }"
+          [(ngModel)]="usuario.nome" class="input-text" type="text" placeholder="DIGITE O SEU NOME" >
         </div>
       </div>
 
@@ -18,61 +20,91 @@
 
       <div class="linha-juncao">
 
-        <div class="fundo-input">
-          <label for="">DATA DE NASCIMENTO*</label>
-          <input [(ngModel)]="usuario.dataNascimento" class="input-text" type="text" placeholder="00/00/0000">
+        <div class="fundo-input"
+        [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('dataNascimento') }"
+        >
+          <label for="">DATA DE NASCIMENTO *</label>
+          <input
+            [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('dataNascimento') }"
+            autofocus
+            inputmode="numeric"
+            mask="00/00/0000"
+            [(ngModel)]="usuario.dataNascimento" class="input-text" type="text" placeholder="00/00/0000">
   
         </div>
   
-        <div class="fundo-input">
-          <label for="">SEXO</label>
-          <select class="input-text" required="true">
+        <div class="fundo-input "
+        [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('sexo') }"
+        >
+          <label for="">SEXO *</label>
+          <select  [(ngModel)]="usuario.sexo" class="input-text" required="true"
+          [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('sexo') }"
+          >
             <option>-- selecione seu sexo--</option>
-            <option value="M">Masculino</option>
-            <option value="F">Feminino</option>
-            <option value="I">Prefiro Não Informar</option>
+            <option value="Masc">Masculino</option>
+            <option value="Femi">Feminino</option>
+            <option value="Ind">Prefiro Não Informar</option>
           </select>
   
         </div>
   
         <div class="fundo-input">
-          <label for="">CPF*</label>
-          <input [(ngModel)]="usuario.cpf" class="input-text" type="text" placeholder="000.000.000-00">
+          <label for="">CPF </label>
+          <input
+          mask="000.000.000-00"
+          [(ngModel)]="usuario.cpf" class="input-text" type="text" placeholder="000.000.000-00"
+          
+          
+          >
   
         </div>
       </div>
 
       <div class="linha-juncao"> 
 
-        <div class="fundo-input">
-          <label for="">TELEFONE/CELULAR*</label>
-          <input [(ngModel)]="usuario.telefone" class="input-text" type="text" placeholder="Telefone">
+        <div class="fundo-input"
+        [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('telefone') }"
+        >
+          <label for="">TELEFONE/CELULAR *</label>
+          <input
+            [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('telefone') }"
+            mask="(00) 0 0000-0000"
+            [(ngModel)]="usuario.telefone" class="input-text" type="text" placeholder="Telefone">
   
         </div>
   
-        <div class="fundo-input">
+        <div class="fundo-input"
+        [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('email') }">
            <label for="">EMAIL*</label>
-          <input [(ngModel)]="usuario.email" class="input-text" type="email" placeholder="Email">
+          <input 
+          [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('email') }"
+          [(ngModel)]="usuario.email" class="input-text" type="email" placeholder="Email">
   
         </div>
 
       </div>
       
       <div class="linha-juncao"> 
-        <div class="fundo-input">
+        <div class="fundo-input"
+        [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('senha') }"
+        >
 
           <label for="">SENHA *</label>
           <input class="input-text"
+          [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('senha') }"
             [(ngModel)]="usuario.senha"
             placeholder="Senha"    
             type="password"      
           >
           
         </div>
-        <div class="fundo-input">
+        <div class="fundo-input"
+        [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('confirmarSenha') }"
+        >
 
           <label for="">CONFIRME SUA SENHA *</label>
           <input class="input-text"
+          [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('confirmarSenha') }"
           [(ngModel)]="usuario.confirmarSenha"
           type="password" 
             placeholder="Senha">
@@ -90,15 +122,25 @@
           </div>
 
           <div class="linha-juncao">  
-            <div class="fundo-input">
-              <label for="">CIDADE/UF*</label>
-              <input [(ngModel)]="usuario.cidade" class="input-text" type="text" placeholder="SÃO LUIS/MA">
+
+            <div class="fundo-input"
+            [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('cidade') }"
+
+            >
+              <label for="">CIDADE/UF *</label>
+              <input 
+              [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('cidade') }"
+              [(ngModel)]="usuario.cidade" class="input-text" type="text" placeholder="SÃO LUIS/MA">
 
             </div>
 
-            <div class="fundo-input">
-              <label for="">ENDEREÇO*</label>
-              <input [(ngModel)]="usuario.endereco" class="input-text" type="text" placeholder="DIGITE O ENDEREÇO DE ENTREGA">
+            <div class="fundo-input"
+            [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('endereco') }"
+            >
+              <label for="">ENDEREÇO *</label>
+              <input 
+              [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('endereco') }"
+              [(ngModel)]="usuario.endereco" class="input-text" type="text" placeholder="DIGITE O ENDEREÇO DE ENTREGA">
             </div>
           </div>
 
@@ -106,26 +148,35 @@
           <div class="linha-juncao">  
 
           
-            <div class="fundo-input">
+            <div class="fundo-input"
+            [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('numero') }"
+            >
   
               <label for="">NUMERO*</label>
-              <input [(ngModel)]="usuario.numero" class="input-text" type="text" placeholder="000">
+              <input 
+              [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('numero') }"
+                inputmode="numeric"
+                [(ngModel)]="usuario.numero" class="input-text" type="text" placeholder="000">
   
             </div>
   
             <div class="fundo-input">
   
-              <label for="">APTO/COMPLEMENTO*</label>
+              <label for="">APTO/COMPLEMENTO</label>
               <input [(ngModel)]="usuario.complemento" class="input-text" type="text" placeholder="APTO/QUADRA">
   
             </div>
   
   
-            <div class="fundo-input">
+            <div class="fundo-input"
+            [ngClass]="{ 'input-empty-caixa': showErrors && isFieldEmpty('bairro') }"
+            >
   
     
               <label for="">BAIRRO*</label>
-              <input [(ngModel)]="usuario.bairro" class="input-text" type="text" placeholder="SELECIONE SEU BAIRRO">
+              <input 
+              [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('bairro') }"
+              [(ngModel)]="usuario.bairro" class="input-text" type="text" placeholder="SELECIONE SEU BAIRRO">
   
   
             </div>  
