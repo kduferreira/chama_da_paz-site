@@ -1,0 +1,27 @@
+<div class="itens_conteiner">
+    <div class="pedido">
+        <img src="" alt="img">
+        <div class="detalhe_pedido">
+            <h2>Nome pedido</h2>
+
+        </div>
+        <div class="remover-item">
+            <button>-</button>
+        </div>
+        
+
+    </div>
+
+    <div class="container_quantidade">
+        <div class="quantidade_button">
+            <button (click)="remover()" id="menos">-</button>
+            <p>{{quantidade}}</p>
+            <button (click)="adicionar()" id="mais">+</button>
+
+
+        </div>
+
+        <p>R$ {{precoTotal}}</p>
+    </div>
+
+</div>

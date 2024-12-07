@@ -1,0 +1,50 @@
+.itens_conteiner{
+    border:1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
+}   
+.pedido{
+    display: flex;
+}
+
+#menos{
+    color: red;
+   width: 2em;
+    padding: 5px;
+}
+#mais{
+    color: green;
+    padding: 5px;
+    width: 2em;
+}
+
+
+.container_quantidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_quantidade p{
+    margin-top:0.5em;
+    font-weight: bold;
+}
+
+.quantidade_button{
+    display: flex;
+    justify-content: space-between;
+
+  
+   
+    border: 1px solid black;
+}
+
+.quantidade_button p{
+    padding: 0.5em;
+  
+}
+
+

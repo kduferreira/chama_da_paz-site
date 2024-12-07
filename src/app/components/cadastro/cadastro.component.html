@@ -39,9 +39,10 @@
           <label for="">SEXO *</label>
           <select  [(ngModel)]="usuario.sexo" class="input-text" required="true"
           [ngClass]="{ 'input-empty': showErrors && isFieldEmpty('sexo') }"
+        
           >
-            <option>-- selecione seu sexo--</option>
-            <option value="Masc">Masculino</option>
+            <!-- <option selected >-- selecione seu sexo--</option> -->
+            <option  value="Masc">Masculino</option>
             <option value="Femi">Feminino</option>
             <option value="Ind">Prefiro Não Informar</option>
           </select>

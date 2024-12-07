@@ -26,6 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.component';
 import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.component';
+import { ItensCarrrinhoComponent } from './components/carrinho-pedidos/itens-carrrinho/itens-carrrinho.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.com
     HeaderComponent,
     
     MenuBigCardComponent,
-          MaisPedidosComponent
+          MaisPedidosComponent,
+          ItensCarrrinhoComponent
   ],
   imports: [
     BrowserModule,
