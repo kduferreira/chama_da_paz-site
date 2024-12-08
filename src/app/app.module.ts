@@ -28,7 +28,8 @@ import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.c
 import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.component';
 import { ItensCarrrinhoComponent } from './components/carrinho-pedidos/itens-carrrinho/itens-carrrinho.component';
 import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
-import { ItensCardapioComponent } from './components/itens-cardapio/itens-cardapio.component';
+import { ItensCardapioComponent } from './components/menu-carrossel/itens-cardapio/itens-cardapio.component';
+import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carrossel.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ItensCardapioComponent } from './components/itens-cardapio/itens-cardap
           MaisPedidosComponent,
           ItensCarrrinhoComponent,
           CardapioPageComponent,
-          ItensCardapioComponent
+          ItensCardapioComponent,
+          MenuCarrosselComponent
   ],
   imports: [
     BrowserModule,

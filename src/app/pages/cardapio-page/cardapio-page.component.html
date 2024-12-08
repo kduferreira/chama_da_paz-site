@@ -5,24 +5,18 @@
     </div>
 
    
-    <div class="cardapio "   >
+    <div class="cardapio"  *ngFor="let categoria of categorias;  index as i"  >
 
-        <div class="title_categoria">
-            <h1>TESTE</h1>
-        </div>
+      <h2>{{categoria.nome}}</h2>
 
-        <div *ngFor="let categoria of categorias.categorias" class="itens_cardapio keen-slider" #sliderRef>
+        
+        <app-menu-carrossel
+            
+            [produtos]="categoria.itens"
+        ></app-menu-carrossel>
 
-            <app-itens-cardapio
-                class="keen-slider__slide"
-                *ngFor="let item of categoria.itens"
-                [nomeItem]="item.nome"
-                [descricao]="item.descricao"
-                [preco]="item.preco">
-      
-        </app-itens-cardapio>
            
-        </div>
+     
 
     </div>
     

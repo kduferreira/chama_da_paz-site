@@ -1,0 +1,26 @@
+<div  class="container_carrossel">
+
+    <!-- <div class="title_categoria">
+        <h1>{{categoriaNome}}</h1>
+    </div> -->
+
+    <div class="itens_cardapio keen-slider"  #sliderRef>
+
+        
+           
+
+                <app-itens-cardapio *ngFor="let produto of produtos"
+                class="keen-slider__slide "
+                    [nomeItem]="produto.nome"
+                    [descricao]="produto.descricao" 
+                    [preco]="produto.preco"
+                ></app-itens-cardapio>
+      
+        
+        
+        
+
+
+    </div>
+
+</div>

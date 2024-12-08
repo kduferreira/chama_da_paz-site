@@ -1,0 +1,14 @@
+.container_carrossel{
+    display: flex;
+    flex-direction: column;
+}
+.itens_cardapio{
+   display: flex;
+   flex-direction: row; 
+}
+
+.title_categoria h1{
+    color: yellow;
+    margin-bottom: 2em;
+}
+   
