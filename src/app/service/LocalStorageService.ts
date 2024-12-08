@@ -15,13 +15,16 @@ export class LocalStorageService {
     } else {
       carrinho.push(item);
     }
-
+    console.log("Pedido add no carrinho ", carrinho);
+    
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
   }
 
-  mostrarCarrinho(): void {
+  mostrarCarrinho(): string[] {
     const carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
-    console.log('Carrinho:', carrinho);
+    console.log( carrinho);
+    return carrinho
+
   }
 
   limparCarrinho(): void {

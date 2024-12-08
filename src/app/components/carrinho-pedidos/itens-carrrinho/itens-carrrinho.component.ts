@@ -8,11 +8,15 @@ import { Component, Input } from '@angular/core';
 export class ItensCarrrinhoComponent {
 
   @Input()
-  quantidade: number = 1;
+  quantidade: number = 0;
   @Input()
-  precoItem: number = 11.50;
+  precoItem: number = 0;
   @Input()
   precoTotal: number = this.precoItem
+
+  ngOnInit(): void {
+    this.precoTotal = this.quantidade * this.precoItem;
+  }
 
 
   adicionar():void{

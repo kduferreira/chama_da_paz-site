@@ -9,7 +9,14 @@
         <p>ADICIONE ITENS</p> -->
         
 
-        <app-itens-carrrinho></app-itens-carrrinho>
+        <app-itens-carrrinho
+            *ngFor="let item of carrinho"
+            [quantidade]="item.quantidade"
+            [precoItem]="item.preco"
+           
+        
+           
+        ></app-itens-carrrinho>
         
     </div>
 </div>
