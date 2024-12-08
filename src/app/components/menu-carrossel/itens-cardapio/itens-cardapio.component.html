@@ -1,7 +1,11 @@
 <div class="container_item">
-    <img src="../../../assets/images/sabores1.png" alt="">
+
+    <div class="imagem">
+        <img src="../../../assets/images/sabores1.png" alt="">
+        <button (click)="adicionarItem()">Comprar</button>
+    </div>
     <h2>{{nomeItem}}</h2>
     <p>{{descricao}}</p>
 
-    <a href="">R$ {{preco|number: '1.2-2'}}</a>
+    <p id="preco">R$ {{preco|number: '1.2-2'}}</p>
 </div>

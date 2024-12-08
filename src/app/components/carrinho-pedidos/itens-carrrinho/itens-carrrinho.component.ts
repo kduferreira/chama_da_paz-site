@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-itens-carrrinho',
@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ItensCarrrinhoComponent {
 
+  @Input()
   quantidade: number = 1;
+  @Input()
   precoItem: number = 11.50;
+  @Input()
   precoTotal: number = this.precoItem
 
 

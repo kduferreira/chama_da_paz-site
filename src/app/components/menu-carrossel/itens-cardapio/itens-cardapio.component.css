@@ -6,12 +6,42 @@
     padding: 1em;
 
 }
+.imagem{
+    position: relative; /* Define um contexto para posicionamento absoluto */
+    display: inline-block; /* Garante que o tamanho do contêiner siga a imagem */
+}
 
-.container_item img{
-    width: 15em;
+.imagem button{
+    position: absolute;
+    display: none;
+    bottom: 10px;
+    left: 20%;
+    padding: 1em 2em;
+    margin-bottom: 0.5em;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container_item:hover .imagem button{
+
+    display: flex;
+   
+}
+
+.imagem img{
+    
+    width: 100%; /* Ajuste conforme necessário */
+    display: block; /* Remove espaços extras ao redor da imagem */
+
 }
 .container_item h2{
-   color: yellow;
+   color: #ffcf00;
    margin-bottom: 0.5em;
 }
 .container_item p{
@@ -20,8 +50,8 @@
     margin-bottom: 0.5em;
  }
  
- .container_item a{
-    color: yellow;
+ #preco{
+    color: #ffcf00;
     font-size: 20px;
     text-decoration: none;
  }
