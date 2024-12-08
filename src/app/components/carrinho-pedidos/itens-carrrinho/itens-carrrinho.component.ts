@@ -10,6 +10,8 @@ export class ItensCarrrinhoComponent {
   @Input()
   quantidade: number = 0;
   @Input()
+  nomeItem:string=""
+  @Input()
   precoItem: number = 0;
   @Input()
   precoTotal: number = this.precoItem
