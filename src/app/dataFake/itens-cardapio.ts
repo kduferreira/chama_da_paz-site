@@ -20,6 +20,27 @@ export const dataFakeCategoria={
                 "id_categoria": 1
               },
               {
+                "idItem": 2,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
+                "idItem": 2,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
+                "idItem": 2,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
                 "idItem": 3,
                 "nome": "Coca-Cola",
                 "descricao": "coca gelada",
@@ -52,7 +73,55 @@ export const dataFakeCategoria={
                 "descricao": "coca gelada",
                 "preco": 8.00,
                 "id_categoria": 1
+              },
+              {
+                "idItem": 3,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
               }
+            ]
+          },
+          {
+            "idCardapio": 1,
+            "nome": "Pizzas",
+            "itens": [
+              {
+                "idItem": 1,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
+                "idItem": 2,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
+                "idItem": 3,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
+                "idItem": 1,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
+              {
+                "idItem": 1,
+                "nome": "Coca-Cola",
+                "descricao": "coca gelada",
+                "preco": 8.00,
+                "id_categoria": 1
+              },
             ]
           }
     ]
