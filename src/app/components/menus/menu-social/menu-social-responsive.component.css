@@ -1,0 +1,27 @@
+/* Responsividade para telas médias (tablets e telas menores) */
+@media screen and (max-width: 768px) {
+    ul li {
+      justify-content: center; /* Centraliza os ícones em telas menores */
+      gap: 15px; /* Aumenta o espaçamento entre os ícones */
+    }
+  
+    ul li img {
+      width: 20px; /* Reduz o tamanho dos ícones */
+      height: 20px; /* Reduz a altura dos ícones */
+    }
+  }
+  
+  /* Responsividade para telas pequenas (celulares) */
+  @media screen and (max-width: 480px) {
+    ul li {
+      flex-direction: column; /* Organiza os ícones verticalmente */
+      align-items: center; /* Centraliza os ícones */
+      gap: 10px; /* Diminui o espaço entre os ícones */
+    }
+  
+    ul li img {
+      width: 30px; /* Aumenta o tamanho dos ícones */
+      height: 30px; /* Aumenta a altura dos ícones */
+    }
+  }
+  

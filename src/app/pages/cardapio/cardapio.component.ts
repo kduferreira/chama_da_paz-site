@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-cardapio',
   templateUrl: './cardapio.component.html',
-  styleUrls: ['./cardapio.component.css']
+  styleUrls: ['./cardapio.component.css', './cardapio.component-responsive.css']
 })
 export class CardapioComponent {
   saboresEsquerda = [

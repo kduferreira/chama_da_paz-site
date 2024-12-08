@@ -1,23 +1,102 @@
-.navbar{
+/* Layout padrão da Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     margin: 0 5em;
-    
+    align-items: center;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.navbar ul li{
+.navbar ul li {
     margin: 2em 1em;
-
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
     font-size: 25px;
     color: white;
+}
 
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column; /* Coloca os itens em coluna em telas menores */
+        margin: 0 2em; /* Ajusta a margem */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Menu também fica em coluna */
+        width: 100%; /* Ocupa toda a largura disponível */
+        align-items: center; /* Alinha os itens no centro */
+    }
+
+    .navbar ul li {
+        margin: 1em 0; /* Menor margem */
+    }
+
+    .navbar img {
+        width: 150px; /* Ajusta o tamanho da logo */
+        height: auto;
+        margin-bottom: 1em; /* Espaço abaixo da logo */
+    }
+
+    .navbar a {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta para telas menores, como tablets */
+    .navbar {
+        margin: 0 1em; /* Menor margem */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0.5em 0;
+    }
+
+    .navbar a {
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+
+    .navbar img {
+        width: 120px; /* Tamanho menor da logo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajusta para telas muito pequenas, como smartphones em modo retrato */
+    .navbar a {
+        font-size: 16px; /* Menor fonte para telas muito pequenas */
+    }
+
+    .navbar {
+        margin: 0;
+    }
+
+    .navbar img {
+        width: 100px; /* Logo ainda menor */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0.5em 0;
+    }
 }

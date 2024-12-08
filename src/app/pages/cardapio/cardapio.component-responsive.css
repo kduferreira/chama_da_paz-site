@@ -1,0 +1,80 @@
+/* Responsivo para Cardápio */
+
+/* Para tablets (máx. 1024px) */
+@media screen and (max-width: 1024px) {
+    .menu-items {
+      flex-direction: column; /* Empilha as colunas verticalmente */
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .menu-column {
+      width: 80%; /* Coluna ocupa 80% da largura */
+    }
+  
+    .menu-item h3 {
+      font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+  
+    .menu-item p {
+      font-size: 0.9rem; /* Reduz tamanho da descrição */
+    }
+  }
+  
+  /* Para celulares (máx. 768px) */
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 2rem; /* Título menor */
+    }
+  
+    .menu-items {
+      gap: 15px;
+    }
+  
+    .menu-column {
+      width: 100%; /* Coluna ocupa toda a largura */
+    }
+  
+    .menu-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .menu-item p {
+      font-size: 0.85rem;
+    }
+  
+    .order-button button {
+      font-size: 1rem; /* Botão ajustado */
+      padding: 8px 16px;
+    }
+  
+    .note {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Para dispositivos muito pequenos (máx. 480px) */
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .menu-item h3 {
+      font-size: 1.2rem;
+    }
+  
+    .menu-item p {
+      font-size: 0.8rem;
+    }
+  
+    .order-button button {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  
+    .note {
+      font-size: 0.7rem;
+      margin-top: 5px;
+    }
+  }
+  

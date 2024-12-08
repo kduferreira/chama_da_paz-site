@@ -1,0 +1,91 @@
+/* Estilos responsivos para a seção "Especialidades" */
+
+/* Para tablets e dispositivos médios (até 1024px) */
+@media screen and (max-width: 1024px) {
+    .specialties-content {
+      flex-direction: column; /* Alinha os itens verticalmente */
+      align-items: center; /* Centraliza o conteúdo */
+      gap: 30px; /* Espaçamento entre os blocos */
+    }
+  
+    .specialties-image,
+    .specialties-details {
+      width: 100%; /* Os dois blocos ocupam 100% da largura */
+    }
+  
+    .specialties-image img {
+      width: 100%; /* Imagem ocupa toda a largura do contêiner */
+    }
+  
+    .title {
+      font-size: 2rem; /* Tamanho menor para o título */
+    }
+  
+    .specialty-text h3 {
+      font-size: 1.5rem; /* Ajusta tamanho do subtítulo */
+    }
+  
+    .specialty-text p {
+      font-size: 0.9rem; /* Texto menor */
+    }
+  }
+  
+  /* Para dispositivos pequenos (até 768px) */
+  @media screen and (max-width: 768px) {
+    .specialties {
+      padding: 30px 15px; /* Reduz o padding geral */
+    }
+  
+    .title {
+      font-size: 1.8rem; /* Título ainda menor */
+    }
+  
+    .specialty-item {
+      gap: 10px; /* Reduz espaço entre o ícone e o texto */
+    }
+  
+    .specialty-item img.icon {
+      width: 40px; /* Ícones menores */
+      height: 40px;
+    }
+  
+    .specialty-text h3 {
+      font-size: 1.3rem; /* Ajusta subtítulo */
+    }
+  
+    .specialty-text p {
+      font-size: 0.8rem; /* Texto mais compacto */
+    }
+  }
+  
+  /* Para dispositivos muito pequenos (até 480px) */
+  @media screen and (max-width: 480px) {
+    .specialties {
+      padding: 20px 10px; /* Padding ainda mais compacto */
+    }
+  
+    .title {
+      font-size: 1.5rem; /* Título reduzido */
+      text-align: center; /* Centraliza o título */
+    }
+  
+    .specialty-item {
+      flex-direction: column; /* Ícone e texto ficam empilhados */
+      align-items: center;
+      text-align: center;
+    }
+  
+    .specialty-item img.icon {
+      width: 30px; /* Ícones ainda menores */
+      height: 30px;
+    }
+  
+    .specialty-text h3 {
+      font-size: 1.2rem; /* Subtítulo menor */
+    }
+  
+    .specialty-text p {
+      font-size: 0.7rem; /* Texto reduzido */
+    }
+  }
+  

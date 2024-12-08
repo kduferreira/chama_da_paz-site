@@ -1,0 +1,84 @@
+/* Responsividade para o cabeçalho (Navbar) */
+@media (max-width: 1024px) {
+    .navbar {
+      flex-direction: column;
+      margin: 0 2em; /* Reduzir as margens para telas menores */
+    }
+  
+    .navbar .menu-left,
+    .navbar .menu-right {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 1em;
+    }
+  
+    .navbar .menu-left li,
+    .navbar .menu-right li {
+      margin: 0.5em 0;
+      text-align: center;
+    }
+  
+    .navbar img.logo {
+      height: 50px; /* Ajusta a logo para não ficar muito grande em telas menores */
+      margin-bottom: 1em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Ajusta o layout para telas ainda menores (como smartphones) */
+    .navbar {
+      margin: 0 1em; /* Ajusta a margem em dispositivos móveis */
+    }
+  
+    .navbar .menu-left,
+    .navbar .menu-right {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 0.5em;
+    }
+  
+    .navbar .menu-left li,
+    .navbar .menu-right li {
+      margin: 0.5em 0;
+    }
+  
+    .navbar img.logo {
+      height: 50px;
+      width: auto;
+      margin-bottom: 1em;
+    }
+  
+    .navbar a {
+      font-size: 18px; /* Reduz o tamanho da fonte para telas pequenas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Para telas pequenas como celulares em modo retrato */
+    .navbar a {
+      font-size: 16px; /* Fonte ainda menor em telas muito pequenas */
+    }
+  
+    .navbar {
+      margin: 0; /* Remove margens para aproveitar o espaço total */
+    }
+  
+    .navbar .menu-left,
+    .navbar .menu-right {
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar img.logo {
+      height: 45px; /* Ajuste ainda maior para telas muito pequenas */
+    }
+  
+    .navbar .menu-left li,
+    .navbar .menu-right li {
+      margin: 0.5em 0;
+    }
+  }
+  

@@ -1,0 +1,96 @@
+/* Estilos responsivos para "Monte Seu Pedido" */
+
+/* Para tablets (máx. 1024px) */
+@media screen and (max-width: 1024px) {
+    .monte-pedido {
+      flex-direction: column; /* Empilha as seções verticalmente */
+      align-items: center;
+      gap: 20px; /* Espaço entre as seções */
+      padding: 20px;
+    }
+  
+    .images-container {
+      width: 100%; /* Cada imagem ocupa a largura total */
+      height: 200px; /* Altura fixa para imagens */
+    }
+  
+    .images-container img {
+      object-fit: cover; /* Garante que a imagem preencha o espaço */
+    }
+  
+    .banner {
+      width: 100%; /* Banner central ocupa largura total */
+      text-align: center;
+    }
+  
+    .banner-title {
+      font-size: 2rem; /* Reduz o tamanho do título */
+    }
+  
+    .banner-text {
+      font-size: 1rem; /* Reduz o texto descritivo */
+    }
+  
+    .order-button {
+      font-size: 1rem; /* Botão ajustado para tamanho menor */
+      padding: 10px 15px;
+    }
+  }
+  
+  /* Para celulares (máx. 768px) */
+  @media screen and (max-width: 768px) {
+    .letreiro {
+      font-size: 2rem; /* Reduz o tamanho da fonte do letreiro */
+    }
+  
+    .monte-pedido {
+      gap: 15px; /* Espaço menor entre as seções */
+    }
+  
+    .images-container {
+      height: 150px; /* Altura menor para as imagens */
+    }
+  
+    .banner-title {
+      font-size: 1.8rem; /* Reduz o título no banner */
+    }
+  
+    .banner-text {
+      font-size: 0.9rem;
+    }
+  
+    .order-button {
+      font-size: 0.9rem;
+      padding: 8px 12px; /* Botão menor */
+    }
+  }
+  
+  /* Para dispositivos muito pequenos (máx. 480px) */
+  @media screen and (max-width: 480px) {
+    .letreiro {
+      font-size: 1.5rem; /* Fonte menor no letreiro */
+      padding: 5px 0;
+    }
+  
+    .monte-pedido {
+      padding: 10px; /* Reduz padding geral */
+    }
+  
+    .images-container {
+      height: 120px; /* Imagens ainda menores */
+    }
+  
+    .banner-title {
+      font-size: 1.5rem; /* Ajusta título central */
+    }
+  
+    .banner-text {
+      font-size: 0.8rem; /* Texto reduzido */
+    }
+  
+    .order-button {
+      font-size: 0.8rem; /* Botão ainda menor */
+      padding: 6px 10px;
+    }
+  }
+  

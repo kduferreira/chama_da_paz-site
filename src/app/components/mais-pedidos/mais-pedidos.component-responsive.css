@@ -1,0 +1,56 @@
+/* Tablet (1024px) */
+@media screen and (max-width: 1024px) {
+    .mais-pedidos-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .mais-pedidos-image,
+    .mais-pedidos-content {
+      width: 100%;
+    }
+  
+    .mais-pedidos-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .mais-pedidos-description {
+      text-align: center;
+    }
+  
+    .mais-pedidos-lista {
+      columns: 1;
+    }
+  }
+  
+  /* Celular (768px) */
+  @media screen and (max-width: 768px) {
+    .mais-pedidos-title {
+      font-size: 1.8rem;
+    }
+  
+    .mais-pedidos-description {
+      font-size: 0.9rem;
+    }
+  
+    .mais-pedidos-lista li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Celulares Pequenos (480px) */
+  @media screen and (max-width: 480px) {
+    .mais-pedidos-title {
+      font-size: 1.5rem;
+    }
+  
+    .mais-pedidos-description {
+      font-size: 0.8rem;
+    }
+  
+    .mais-pedidos-lista li {
+      font-size: 0.9rem;
+    }
+  }
+  

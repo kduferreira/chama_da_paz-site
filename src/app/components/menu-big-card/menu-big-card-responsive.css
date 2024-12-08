@@ -1,0 +1,54 @@
+/* Responsividade para o componente MenuBigCard */
+
+/* Para tablets (até 1024px) */
+@media screen and (max-width: 1024px) {
+  .card-component {
+    flex-direction: column; /* Alinha os itens verticalmente */
+    text-align: center;
+    padding: 3em; /* Ajusta o padding */
+  }
+
+  .card-component .texto {
+    font-size: 25px; /* Reduz o tamanho do texto */
+    margin-bottom: 1.5em;
+  }
+
+  .card-component .button-pedido button {
+    font-size: 18px; /* Botão menor */
+    padding: 0.8em 1.5em; /* Menor padding */
+  }
+}
+
+/* Para celulares (até 768px) */
+@media screen and (max-width: 768px) {
+  .card-component {
+    padding: 2em; /* Padding menor */
+  }
+
+  .card-component .texto {
+    font-size: 20px; /* Texto ainda menor */
+    margin-bottom: 1em;
+  }
+
+  .card-component .button-pedido button {
+    font-size: 16px; /* Texto menor no botão */
+    padding: 0.6em 1.2em; /* Ajusta o tamanho do botão */
+  }
+}
+
+/* Para dispositivos muito pequenos (até 480px) */
+@media screen and (max-width: 480px) {
+  .card-component {
+    padding: 1.5em;
+  }
+
+  .card-component .texto {
+    font-size: 18px; /* Texto compacto */
+    margin-bottom: 0.8em;
+  }
+
+  .card-component .button-pedido button {
+    font-size: 14px; /* Botão menor */
+    padding: 0.5em 1em; /* Padding compacto */
+  }
+}
