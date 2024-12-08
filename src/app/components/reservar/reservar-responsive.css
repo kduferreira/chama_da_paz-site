@@ -1,0 +1,60 @@
+/* Responsividade para o componente Reservar */
+
+/* Para tablets (até 1024px) */
+@media screen and (max-width: 1024px) {
+    .reservation-bar {
+      flex-direction: column; /* Alinha os elementos verticalmente */
+      padding: 2em; /* Ajusta o padding */
+      max-width: 100%; /* Permite que ocupe toda a largura disponível */
+      gap: 15px; /* Menor espaço entre os elementos */
+    }
+  
+    .reservation-field {
+      width: 100%; /* Cada campo ocupa toda a largura */
+    }
+  
+    .reserve-button {
+      width: 100%; /* Botão ocupa toda a largura */
+      text-align: center;
+    }
+  }
+  
+  /* Para celulares (até 768px) */
+  @media screen and (max-width: 768px) {
+    .reservation-bar {
+      padding: 1.5em; /* Menor padding */
+      border-radius: 50px; /* Bordas menores */
+    }
+  
+    .reservation-field label span {
+      font-size: 12px; /* Texto menor */
+    }
+  
+    .reservation-field input {
+      font-size: 14px; /* Ajusta tamanho do input */
+      padding: 8px; /* Menor padding */
+    }
+  
+    .reserve-button {
+      font-size: 14px; /* Botão menor */
+      padding: 10px 20px; /* Ajusta o tamanho do botão */
+    }
+  }
+  
+  /* Para dispositivos muito pequenos (até 480px) */
+  @media screen and (max-width: 480px) {
+    .reservation-bar {
+      padding: 1em; /* Padding compacto */
+      gap: 10px; /* Espaço mínimo entre os itens */
+    }
+  
+    .reservation-field label span {
+      font-size: 10px; /* Texto ainda menor */
+    }
+  
+    .reserve-button {
+      font-size: 12px; /* Texto menor no botão */
+      padding: 8px 15px; /* Padding compacto */
+    }
+  }
+  

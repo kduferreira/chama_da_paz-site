@@ -1,0 +1,37 @@
+/* Responsividade para o menu */
+@media (max-width: 1024px) {
+    .menu-container {
+      flex-direction: column; /* Coloca os itens um abaixo do outro em telas menores */
+      align-items: center; /* Alinha os itens no centro */
+      padding: 10px; /* Adiciona um pouco de espaçamento nas laterais */
+    }
+  
+    .menu-container > * {
+      margin: 10px 0; /* Adiciona margem entre os itens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-container {
+      padding: 5px; /* Reduz o espaçamento lateral para telas menores */
+    }
+  
+    .menu-container > * {
+      margin: 8px 0; /* Menos margem entre os itens em telas muito pequenas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-container {
+      padding: 0 10px; /* Ajuste de padding para telas menores */
+    }
+  
+    .menu-container > * {
+      margin: 5px 0; /* Margem ainda menor em telas de smartphones */
+    }
+  
+    ul {
+      font-size: 14px; /* Reduz o tamanho da fonte para caber melhor em telas pequenas */
+    }
+  }
+  

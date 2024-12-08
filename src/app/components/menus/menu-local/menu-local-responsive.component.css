@@ -1,0 +1,52 @@
+/* Responsividade para o menu */
+@media (max-width: 1024px) {
+    .menu-container > ul {
+      flex-direction: column; /* Muda a direção dos itens para coluna em telas menores */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+  
+    .menu-container > ul li {
+      margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-container > ul {
+      flex-direction: column; /* Muda para coluna para telas ainda menores */
+      align-items: flex-start;
+    }
+  
+    .menu-container > ul li {
+      margin-bottom: 8px;
+    }
+  
+    ul li img {
+      width: 12px; /* Reduz o tamanho do ícone em telas menores */
+      height: 12px;
+    }
+  
+    ul li a {
+      font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-container > ul {
+      flex-direction: column; /* Muda para coluna em dispositivos móveis */
+      align-items: flex-start;
+    }
+  
+    .menu-container > ul li {
+      margin-bottom: 5px; /* Menor margem entre os itens */
+    }
+  
+    ul li img {
+      width: 10px; /* Menor tamanho dos ícones em telas pequenas */
+      height: 10px;
+    }
+  
+    ul li a {
+      font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    }
+  }
+  

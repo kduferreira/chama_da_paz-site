@@ -1,0 +1,90 @@
+/* Estilos responsivos para a seção "Principais Sabores" */
+
+/* Para tablets e dispositivos médios (até 1024px) */
+@media screen and (max-width: 1024px) {
+    .flavors-list {
+      flex-wrap: wrap; /* Permite que os itens se quebrem em linhas */
+      justify-content: center; /* Centraliza os itens */
+      gap: 20px; /* Espaçamento entre os itens */
+    }
+  
+    .flavor-item {
+      width: 45%; /* Cada item ocupa 45% da largura */
+      margin-bottom: 20px; /* Espaçamento entre as linhas */
+    }
+  
+    .flavor-item img {
+      width: 150px; /* Reduz o tamanho da imagem */
+    }
+  
+    .title {
+      font-size: 2rem; /* Reduz o tamanho do título */
+    }
+  }
+  
+  /* Para dispositivos pequenos (até 768px) */
+  @media screen and (max-width: 768px) {
+    .flavor-item {
+      width: 90%; /* Cada item ocupa quase toda a largura */
+    }
+  
+    .title {
+      font-size: 1.8rem; /* Título ainda menor */
+    }
+  
+    .flavor-item img {
+      width: 120px; /* Imagem menor */
+    }
+  
+    .flavor-item h3 {
+      font-size: 1.5rem; /* Subtítulo menor */
+    }
+  
+    .flavor-item p {
+      font-size: 0.9rem; /* Texto reduzido */
+    }
+  
+    .flavor-item button {
+      padding: 8px 12px; /* Botão menor */
+    }
+  }
+  
+  /* Para dispositivos muito pequenos (até 480px) */
+  @media screen and (max-width: 480px) {
+    .flavors {
+      padding: 15px; /* Padding menor */
+    }
+  
+    .title {
+      font-size: 1.5rem; /* Centraliza e reduz o título */
+      text-align: center;
+    }
+  
+    .flavors-list {
+      flex-direction: column; /* Empilha os itens verticalmente */
+      gap: 15px; /* Espaçamento entre os itens */
+    }
+  
+    .flavor-item {
+      width: 100%; /* Cada item ocupa toda a largura */
+      text-align: center;
+    }
+  
+    .flavor-item img {
+      width: 100px; /* Imagem menor */
+    }
+  
+    .flavor-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .flavor-item p {
+      font-size: 0.8rem;
+    }
+  
+    .flavor-item button {
+      font-size: 0.9rem;
+      padding: 6px 10px; /* Botão ainda menor */
+    }
+  }
+  
