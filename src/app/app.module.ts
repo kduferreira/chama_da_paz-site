@@ -27,6 +27,8 @@ import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { MenuBigCardComponent } from './components/menu-big-card/menu-big-card.component';
 import { MaisPedidosComponent } from './components/mais-pedidos/mais-pedidos.component';
 import { ItensCarrrinhoComponent } from './components/carrinho-pedidos/itens-carrrinho/itens-carrrinho.component';
+import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
+import { ItensCardapioComponent } from './components/itens-cardapio/itens-cardapio.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { ItensCarrrinhoComponent } from './components/carrinho-pedidos/itens-car
     
     MenuBigCardComponent,
           MaisPedidosComponent,
-          ItensCarrrinhoComponent
+          ItensCarrrinhoComponent,
+          CardapioPageComponent,
+          ItensCardapioComponent
   ],
   imports: [
     BrowserModule,

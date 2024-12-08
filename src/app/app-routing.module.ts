@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { AcessoUsuarioComponent } from './pages/acesso-usuario/acesso-usuario.component';
+import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,9 @@ const routes: Routes = [
   {
     path:"cadastro", component: AcessoUsuarioComponent
   },
+  {
+    path:"cardapio", component: CardapioPageComponent
+  }
 
 
 

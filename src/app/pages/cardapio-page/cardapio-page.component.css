@@ -1,0 +1,19 @@
+.navbar{
+    background-color: #1E1E1C;
+}
+
+.title_categoria h1{
+ color: yellow;
+ margin-bottom: 2em;
+}
+
+.cardapio{
+    background-color: #1E1E1C;
+    padding: 3em;
+}
+
+
+.itens_cardapio{
+    display: flex;
+    flex-direction: row;
+}

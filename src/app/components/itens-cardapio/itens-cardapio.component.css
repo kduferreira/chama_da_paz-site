@@ -1,0 +1,28 @@
+.container_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border: 1px solid red;
+}
+
+.container_item img{
+    width: 15em;
+}
+.container_item h2{
+   color: yellow;
+   margin-bottom: 0.5em;
+}
+.container_item p{
+    color: white;
+    margin-bottom: 0.5em;
+ }
+ 
+ .container_item a{
+    color: yellow;
+    font-size: 20px;
+    text-decoration: none;
+ }
+ 
+
