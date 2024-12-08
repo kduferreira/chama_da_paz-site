@@ -3,16 +3,27 @@
         <app-header></app-header>
         <app-menu-big-card></app-menu-big-card>
     </div>
-    <div class="cardapio">
+    <div class="cardapio"*ngFor="let categoria of categorias.categorias">
 
-        <div class="title_categoria">
-            <h1>Bebidas</h1>
+        <div class="title_categoria"
+            
+        >
+            <h1>{{categoria.nome}}</h1>
         </div>
 
-        <div class="itens_cardapio">
-            <app-itens-cardapio></app-itens-cardapio>
-            <app-itens-cardapio></app-itens-cardapio>
-            <app-itens-cardapio></app-itens-cardapio>
+        <div  class="itens_cardapio">
+            <app-itens-cardapio
+            *ngFor="let item of categoria.itens"
+            [nomeItem]="item.nome"
+            [descricao]="item.descricao"
+            [preco]="item.preco"
+            
+
+                
+            >
+      
+        </app-itens-cardapio>
+           
         </div>
 
     </div>

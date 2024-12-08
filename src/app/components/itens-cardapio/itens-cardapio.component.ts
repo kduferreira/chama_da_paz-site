@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-itens-cardapio',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./itens-cardapio.component.css']
 })
 export class ItensCardapioComponent {
+
+  @Input()
+  nomeItem:string ="";
+
+  @Input()
+  descricao:string="";
+
+  @Input()
+  preco:number=0;
 
 }
