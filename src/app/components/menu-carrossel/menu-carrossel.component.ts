@@ -31,7 +31,7 @@ export class MenuCarrosselComponent {
           slides: { perView: 2, spacing: 1 },
         },
         "(min-width: 1000px)": {
-          slides: { perView: 4, spacing: 1 },
+          slides: { perView: 5, spacing: 3 },
         },
       },
       slides: { perView: 1 },
