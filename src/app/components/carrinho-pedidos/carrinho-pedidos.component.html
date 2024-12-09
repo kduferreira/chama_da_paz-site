@@ -5,11 +5,14 @@
     </div>
 
     <div class="item">
-        <!-- <h2>SEU PEDIDO ESTA VAZIO</h2>
-        <p>ADICIONE ITENS</p> -->
-        
 
-        <app-itens-carrrinho
+        <div class="sem-pedido" *ngIf="carrinho.length == 0">
+            <h2>SEU PEDIDO ESTA VAZIO</h2>
+            <p>ADICIONE ITENS</p>
+        </div>
+
+        <div class="pedidos">
+              <app-itens-carrrinho
             *ngFor="let item of carrinho"
             [quantidade]="item.quantidade"
             [precoItem]="item.preco"
@@ -18,6 +21,24 @@
         
            
         ></app-itens-carrrinho>
+        </div>
         
+        
+
+      
+
+        <div  *ngIf="carrinho.length > 0" 
+            class="container_finalizar-pedido">
+            
+            <div class="total-preco">
+                <p>VALOR TOTAL R$ teste</p>
+            </div>
+
+            <div class="butao-finalizar">
+                <button>Finalizar pedido</button>
+            </div>
+        </div>
     </div>
+
+  
 </div>

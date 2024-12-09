@@ -31,10 +31,21 @@
 .item{
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
-    height: 78%;
+    height: 85%;
+    justify-content: space-between;
+   
+    
 }
+.sem-pedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   max-height: 80%;
+    
+}
+
+
 
 
 
@@ -44,4 +55,45 @@
 
 .item  p{
     font-size: 20px ;
+}
+
+.container_finalizar-pedido{
+    position: relative;
+    bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+    align-items: center;
+}
+
+.pedidos{
+    overflow-y: scroll;
+}
+
+.total-preco{
+    display: flex;
+    background-color: bisque;
+    width: 100%;
+    padding: 1em;
+    justify-content: center;
+}
+
+.total-preco p{
+   
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.butao-finalizar {
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.butao-finalizar button{
+ 
+    cursor: pointer;
+    padding: 1em 2em;
 }
