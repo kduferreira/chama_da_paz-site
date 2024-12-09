@@ -67,7 +67,7 @@
 
 .container_finalizar-pedido{
     position: relative;
-    bottom: 1px;
+    bottom: -30px;
     display: flex;
     flex-direction: column;
     margin-top: 0.5em;
