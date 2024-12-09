@@ -68,6 +68,7 @@
 
 .pedidos{
     overflow-y: scroll;
+    height: 21em;
 }
 
 .total-preco{

@@ -1,3 +1,7 @@
+.container-nav{
+    background-color: #1F1F1D;
+}
+
 .container-acesso-usuario{
     display: flex;
     flex-direction: row;
@@ -9,9 +13,8 @@
     
 }
 
-.container-nav{
-    background-color: #1F1F1D;
-}
+
+
 
 .coluna-login-pedidos{
     display: flex;
