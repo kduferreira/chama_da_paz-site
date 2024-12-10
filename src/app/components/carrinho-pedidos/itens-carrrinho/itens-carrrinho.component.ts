@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { LocalStorageService } from 'src/app/service/LocalStorageService';
+
 
 @Component({
   selector: 'app-itens-carrrinho',
@@ -7,6 +10,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ItensCarrrinhoComponent {
 
+
+  constructor(private localStorageService:LocalStorageService){}
+
+  @Input()
+  id:number=0
   @Input()
   quantidade: number = 0;
   @Input()
@@ -16,8 +24,12 @@ export class ItensCarrrinhoComponent {
   @Input()
   precoTotal: number = this.precoItem
 
+  
+
   ngOnInit(): void {
     this.precoTotal = this.quantidade * this.precoItem;
+
+    
   }
 
 
@@ -34,5 +46,15 @@ export class ItensCarrrinhoComponent {
       this.precoTotal = this.precoItem * this.quantidade
     }
   }
+ 
+  removerItemCarrinho():void{
+    this.localStorageService.removerDoCarrinho(this.id)
+
+  
+  }
+
+
+
+
 
 }

@@ -10,10 +10,15 @@ export class CarrinhoPedidosComponent {
   constructor(private localStorageService:LocalStorageService){}
   carrinho: any[] = [];
 
+
+  total:number=0
+
   ngOnInit(): void {
     this.carrinho = this.localStorageService.mostrarCarrinho(); // Usando o método do serviço
 
-    console.log(this.carrinho[0]);
+    this.total = this.localStorageService.calcularTotalCarrinho()
+
+    
     
     
   }

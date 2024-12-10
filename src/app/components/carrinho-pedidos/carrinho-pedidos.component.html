@@ -17,6 +17,7 @@
             <div class="pedidos" >
                 <app-itens-carrrinho
                 *ngFor="let item of carrinho"
+                [id]="item.id"
                 [quantidade]="item.quantidade"
                 [precoItem]="item.preco"
                 [nomeItem]="item.nome"></app-itens-carrrinho>

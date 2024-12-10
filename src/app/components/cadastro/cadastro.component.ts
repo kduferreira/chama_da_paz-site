@@ -76,7 +76,7 @@ export class CadastroComponent {
 
 
     this.validateFields()
-console.log(this.usuario);
+
 
 
 
@@ -92,7 +92,7 @@ if(this.validateFields()  && !this.isFieldEmpty("nome")
   
     this.cadastroService.cadastrarUsuario(this.usuario).subscribe(
       (response) => {
-        console.log('Cadastro realizado com sucesso:', response);
+       
       
          alert('Usuário cadastrado com sucesso!');
       this.usuario = {
