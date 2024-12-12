@@ -56,6 +56,12 @@ export class LocalStorageService {
     const indiceProduto = carrinho.findIndex((produto) => (produto.id) === id);
 
      
+    if(quantidade == 0){
+      console.log("removendo");
+      
+      this.removerDoCarrinho(id);
+      return;
+    }
 
     
   
