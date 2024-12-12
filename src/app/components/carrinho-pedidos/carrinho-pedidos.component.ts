@@ -8,10 +8,10 @@ import { LocalStorageService } from 'src/app/service/LocalStorageService';
 export class CarrinhoPedidosComponent {
 
   constructor(private localStorageService:LocalStorageService){}
-  carrinho: any[] = [];
 
+  carrinho: any;
+  totalCompra:number=0;
 
-  totalCompra:number=0
 
   ngOnInit(): void {
     this.carrinho = this.localStorageService.mostrarCarrinho(); // Usando o método do serviço
@@ -24,7 +24,11 @@ export class CarrinhoPedidosComponent {
   }
 
   receberTotalCompra(valor: number) {
+    console.log(valor);
+    
     this.totalCompra = valor;
   }
+
+ 
 
 }

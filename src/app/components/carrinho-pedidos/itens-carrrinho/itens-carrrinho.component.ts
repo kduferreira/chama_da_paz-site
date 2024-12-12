@@ -53,13 +53,17 @@ export class ItensCarrrinhoComponent {
 
       this.localStorageService.atualizarItem(this.id, this.quantidade,this.precoTotal)
       this.enviarDadosPedido()
-    }
+      
+    }if (this.quantidade === 0) {
+      this.recarregarPagina()
+    } 
   }
  
   removerItemCarrinho():void{
     this.localStorageService.removerDoCarrinho(this.id)
     this.enviarDadosPedido()
-
+    
+    this.recarregarPagina()
   
   }
 
@@ -70,6 +74,10 @@ export class ItensCarrrinhoComponent {
 
 
 
+
+  recarregarPagina() {
+    window.location.reload();
+  }
 
 
 }

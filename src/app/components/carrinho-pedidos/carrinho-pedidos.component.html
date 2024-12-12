@@ -16,6 +16,7 @@
     <div class="comItem" *ngIf="carrinho.length > 0" >
             <div class="pedidos" >
                 <app-itens-carrrinho (totalCompra)="receberTotalCompra($event)"
+             
                 *ngFor="let item of carrinho"
                 [id]="item.id"
                 [quantidade]="item.quantidade"
