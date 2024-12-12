@@ -35,8 +35,9 @@ export class ItensCarrrinhoComponent {
 
   adicionar():void{
     this.quantidade++;
-
     this.precoTotal = this.precoItem * this.quantidade
+
+    this.localStorageService.atualizarItem(this.id, this.quantidade, this.precoTotal)
     
   }
 
@@ -44,6 +45,8 @@ export class ItensCarrrinhoComponent {
     if(this.quantidade>0){
       this.quantidade--;
       this.precoTotal = this.precoItem * this.quantidade
+
+      this.localStorageService.atualizarItem(this.id, this.quantidade,this.precoTotal)
     }
   }
  
