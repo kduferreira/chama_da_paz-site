@@ -11,16 +11,20 @@ export class CarrinhoPedidosComponent {
   carrinho: any[] = [];
 
 
-  total:number=0
+  totalCompra:number=0
 
   ngOnInit(): void {
     this.carrinho = this.localStorageService.mostrarCarrinho(); // Usando o método do serviço
 
-    this.total = this.localStorageService.calcularTotalCarrinho()
+    this.totalCompra = this.localStorageService.calcularTotalCarrinho()
 
     
     
     
+  }
+
+  receberTotalCompra(valor: number) {
+    this.totalCompra = valor;
   }
 
 }

@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LocalStorageService } from 'src/app/service/LocalStorageService';
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-itens-carrrinho',
@@ -21,8 +21,12 @@ export class ItensCarrrinhoComponent {
   nomeItem:string=""
   @Input()
   precoItem: number = 0;
+
   @Input()
   precoTotal: number = this.precoItem
+
+  @Output() 
+  totalCompra = new EventEmitter<number>();
 
   
 
@@ -38,6 +42,7 @@ export class ItensCarrrinhoComponent {
     this.precoTotal = this.precoItem * this.quantidade
 
     this.localStorageService.atualizarItem(this.id, this.quantidade, this.precoTotal)
+    this.enviarDadosPedido()
     
   }
 
@@ -47,13 +52,20 @@ export class ItensCarrrinhoComponent {
       this.precoTotal = this.precoItem * this.quantidade
 
       this.localStorageService.atualizarItem(this.id, this.quantidade,this.precoTotal)
+      this.enviarDadosPedido()
     }
   }
  
   removerItemCarrinho():void{
     this.localStorageService.removerDoCarrinho(this.id)
+    this.enviarDadosPedido()
 
   
+  }
+
+  //esse metodo atualiza os dados de numero de item no carrinho e o valor total da compra
+  enviarDadosPedido() {
+    this.totalCompra.emit(this.localStorageService.calcularTotalCarrinho());
   }
 
 
