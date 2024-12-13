@@ -1,0 +1,49 @@
+<div class="container_ger-cardapio">
+    <div class="nova_categoria">
+            <button>Adicionar nova Categoria</button>
+        </div>
+
+    <div *ngFor="let categoria of categorias">
+
+   
+
+   
+    <div class="categoria">
+
+        <div class="header">
+
+            <h2>{{categoria.nome}}</h2>
+    
+            <div class="botoes">
+                <button>Adicionar um item</button>
+            </div>
+
+        </div>
+
+        <table>
+            <thead class="cabecario">
+                <tr>
+                    <th>Item</th>
+                    <th>Status</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categoria.itens">
+                    <td>{{item.nome}}</td>
+                    <td>Ativo</td>
+                    <td>R$ {{item.preco | number: '1.2-2'}}</td>
+                </tr>
+             
+               
+              
+            </tbody>
+        </table>
+
+
+
+
+
+    </div>
+</div>
+</div>

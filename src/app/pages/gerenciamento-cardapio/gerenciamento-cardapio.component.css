@@ -1,0 +1,18 @@
+
+.container_ger-cardapio{
+    height: 45em;
+}
+.categoria{
+    padding: 1em;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}

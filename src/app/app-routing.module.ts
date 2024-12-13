@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AcessoUsuarioComponent } from './pages/acesso-usuario/acesso-usuario.component';
 import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/gerenciamento-cardapio.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:"pedidos", component: PedidosComponent
   },
+
+  {
+    path:"painel", component: GerenciamentoCardapioComponent
+  }
 
 
 

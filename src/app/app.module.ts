@@ -31,6 +31,7 @@ import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.compo
 import { ItensCardapioComponent } from './components/menu-carrossel/itens-cardapio/itens-cardapio.component';
 import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carrossel.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/gerenciamento-cardapio.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { PedidosComponent } from './pages/pedidos/pedidos.component';
           CardapioPageComponent,
           ItensCardapioComponent,
           MenuCarrosselComponent,
-          PedidosComponent
+          PedidosComponent,
+          GerenciamentoCardapioComponent
   ],
   imports: [
     BrowserModule,
