@@ -30,6 +30,7 @@ import { ItensCarrrinhoComponent } from './components/carrinho-pedidos/itens-car
 import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
 import { ItensCardapioComponent } from './components/menu-carrossel/itens-cardapio/itens-cardapio.component';
 import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carrossel.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carross
           ItensCarrrinhoComponent,
           CardapioPageComponent,
           ItensCardapioComponent,
-          MenuCarrosselComponent
+          MenuCarrosselComponent,
+          PedidosComponent
   ],
   imports: [
     BrowserModule,
