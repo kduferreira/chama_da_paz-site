@@ -1,18 +1,51 @@
 
 .container_ger-cardapio{
+
+    padding: 3em;
     height: 45em;
+    overflow-y: scroll;
+   
 }
 .categoria{
     padding: 1em;
 }
 
+.nova_categoria button{
+    padding: 1em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
 .header{
     display: flex;
     justify-content: space-between;
+    border: 1px solid black;
+    align-items: center;
+    padding: 1em;
+    border-top-left-radius:10px;
+    border-top-right-radius: 10px;
+
+}
+
+.botoes button{
+    padding: 1em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabela{
+    border: 1px solid black;
+    width: 100%;
+    
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-size: 20px;
 }

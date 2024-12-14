@@ -1,7 +1,7 @@
 <div class="container_ger-cardapio">
     <div class="nova_categoria">
-            <button (click)="openPopupCategoria()">Adicionar nova Categoria</button>
-        </div>
+        <button (click)="openPopupCategoria()">Adicionar nova Categoria</button>
+    </div>
 
     <div *ngFor="let categoria of categorias">
 
@@ -20,10 +20,11 @@
 
         </div>
 
-        <table>
+        <table class="tabela">
             <thead class="cabecario">
                 <tr>
                     <th>Item</th>
+                    <th>Descrição</th>
                     <th>Status</th>
                     <th>Preço</th>
                 </tr>
@@ -31,6 +32,7 @@
             <tbody>
                 <tr *ngFor="let item of categoria.itens">
                     <td>{{item.nome}}</td>
+                    <td>{{item.descricao}}</td>
                     <td>Ativo</td>
                     <td>R$ {{item.preco | number: '1.2-2'}}</td>
                 </tr>
