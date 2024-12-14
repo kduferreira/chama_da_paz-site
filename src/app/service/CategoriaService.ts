@@ -13,4 +13,12 @@ export class CategoriaService {
   buscarCategorias(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+
+  salvarCategoria(categoria: any): Observable<any> {
+    console.log("salvando");
+    
+    return this.http.post(this.apiUrl, categoria);
+  }
+  
+
 }

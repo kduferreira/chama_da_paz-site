@@ -1,6 +1,6 @@
 <div class="container_ger-cardapio">
     <div class="nova_categoria">
-            <button>Adicionar nova Categoria</button>
+            <button (click)="openPopupCategoria()">Adicionar nova Categoria</button>
         </div>
 
     <div *ngFor="let categoria of categorias">
@@ -15,7 +15,7 @@
             <h2>{{categoria.nome}}</h2>
     
             <div class="botoes">
-                <button>Adicionar um item</button>
+                <button (click)="openPopupItem()">Adicionar um item</button>
             </div>
 
         </div>

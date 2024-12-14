@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { catchError } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { CategoriaPopupComponent } from 'src/app/components/popup/categoria-popup/categoria-popup.component';
+import { ItemFormPopupComponent } from 'src/app/components/popup/item-form-popup/item-form-popup.component';
+import { PopupService } from 'src/app/popup/popup.service.spec';
 import { CategoriaService } from 'src/app/service/CategoriaService';
-
 
 @Component({
   selector: 'app-gerenciamento-cardapio',
@@ -10,7 +12,7 @@ import { CategoriaService } from 'src/app/service/CategoriaService';
 })
 export class GerenciamentoCardapioComponent {
 
-  constructor(private categoriaService:CategoriaService){}
+  constructor(private categoriaService:CategoriaService,  private dialog: MatDialog){}
   categorias: any[] = [];
 
   ngOnInit(): void {
@@ -31,4 +33,47 @@ export class GerenciamentoCardapioComponent {
       }
     );
   }
+
+
+
+  openPopupCategoria() {
+    const dialogRef = this.dialog.open(CategoriaPopupComponent, {
+      width: '400px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log('Dados do Formulário:', result);
+        // Aqui você pode salvar os dados em um backend ou exibi-los em outro componente.
+        this.categoriaService.salvarCategoria(result).subscribe({
+          next: (response) => {
+            console.log('Categoria salva com sucesso:', response);
+          },
+          error: (err) => {
+            console.error('Erro ao salvar categoria:', err);
+          },
+        });
+
+
+
+        
+      }
+    });
+  }
+
+
+  openPopupItem() {
+    const dialogRef = this.dialog.open(ItemFormPopupComponent, {
+      width: '400px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log('Dados do Formulário:', result);
+        // Aqui você pode salvar os dados em um backend ou exibi-los em outro componente.
+      }
+    });
+  }
+
+  
 }

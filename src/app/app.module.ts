@@ -33,15 +33,18 @@ import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carross
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/gerenciamento-cardapio.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { CategoriaPopupComponent } from './components/popup/categoria-popup/categoria-popup.component';
+import { ItemFormPopupComponent } from './components/popup/item-form-popup/item-form-popup.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     CadastroComponent,
-    
-    
     MenuInfoComponent,
-    
     ReservarComponent,
     CardapioComponent,
     DaCasaComponent,
@@ -50,25 +53,24 @@ import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/g
     MaioresPedidosComponent,
     RodapeComponent,
     SaboresComponent,
-    
-   
     MenuLocalComponent,
-  
     MenuSocialComponent,
     LoginComponent,
     AcessoUsuarioComponent,
     CarrinhoPedidosComponent,
     MonteComponent,
     HeaderComponent,
-    
     MenuBigCardComponent,
-          MaisPedidosComponent,
-          ItensCarrrinhoComponent,
-          CardapioPageComponent,
-          ItensCardapioComponent,
-          MenuCarrosselComponent,
-          PedidosComponent,
-          GerenciamentoCardapioComponent
+    MaisPedidosComponent,
+    ItensCarrrinhoComponent,
+    CardapioPageComponent,
+    ItensCardapioComponent,
+    MenuCarrosselComponent,
+    PedidosComponent,
+    GerenciamentoCardapioComponent,
+
+    CategoriaPopupComponent,
+     ItemFormPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +78,16 @@ import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/g
     HttpClientModule,
     FormsModule,
     NgxMaskDirective,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    
+    
+    
+    
   ],
   providers: [provideNgxMask({})],
   bootstrap: [AppComponent]
