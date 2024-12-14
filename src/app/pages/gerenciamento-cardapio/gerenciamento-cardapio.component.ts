@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CategoriaPopupComponent } from 'src/app/components/popup/categoria-popup/categoria-popup.component';
 import { ItemFormPopupComponent } from 'src/app/components/popup/item-form-popup/item-form-popup.component';
-import { PopupService } from 'src/app/popup/popup.service.spec';
 import { CategoriaService } from 'src/app/service/CategoriaService';
+import { ItemService } from 'src/app/service/itemServicec';
 
 @Component({
   selector: 'app-gerenciamento-cardapio',
@@ -12,7 +12,8 @@ import { CategoriaService } from 'src/app/service/CategoriaService';
 })
 export class GerenciamentoCardapioComponent {
 
-  constructor(private categoriaService:CategoriaService,  private dialog: MatDialog){}
+  constructor(private itemService:ItemService, private categoriaService:CategoriaService,  private dialog: MatDialog){}
+  idCategoria:number = 0;
   categorias: any[] = [];
 
   ngOnInit(): void {
@@ -48,6 +49,7 @@ export class GerenciamentoCardapioComponent {
         this.categoriaService.salvarCategoria(result).subscribe({
           next: (response) => {
             console.log('Categoria salva com sucesso:', response);
+            window.location.reload();
           },
           error: (err) => {
             console.error('Erro ao salvar categoria:', err);
@@ -62,18 +64,40 @@ export class GerenciamentoCardapioComponent {
   }
 
 
-  openPopupItem() {
+  openPopupItem(idCategoria:number) {
+
+    console.log(idCategoria);
+    
     const dialogRef = this.dialog.open(ItemFormPopupComponent, {
       width: '400px',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
+      //add id de categoria selecionada ao resultado
+      result.id_categoria = idCategoria
       if (result) {
-        console.log('Dados do Formulário:', result);
-        // Aqui você pode salvar os dados em um backend ou exibi-los em outro componente.
+        
+          // Aqui você pode salvar os dados em um backend ou exibi-los em outro componente.
+          this.itemService.salvarItem(result).subscribe({
+
+            next: (response) => {
+              console.log('Item salvo com sucesso:', response);
+              window.location.reload();
+            },
+            error: (err) => {
+              console.error('Erro ao salvar categoria:', err);
+            },
+          });
+  
+        
       }
     });
   }
 
   
+  recarregarPagina() {
+    window.location.reload();
+  }
+
+
 }
