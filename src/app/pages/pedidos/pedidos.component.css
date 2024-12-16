@@ -1,6 +1,8 @@
 .container_pedidos{
     display: flex;
     height: 48em;
+    padding: 1em;
+    
    
 }
 
@@ -33,6 +35,7 @@
 
 .detalhes_pedido{
     width: 50%;
+    border: 1px solid black;
 }
 
 .barra_superior{
@@ -76,13 +79,19 @@
 }
 
 .barra_finalizacao{
+    position: relative;
+    bottom: 1px;
     display: flex;
     justify-content: flex-end;
+    border: 1px solid black;
+    padding: 1em;
+    position: relative;
+  bottom: -44px;
 }
 
 .barra_finalizacao button{
    padding: 1em;
-   margin: 1em;
+ 
 }
 
 #cancelar{

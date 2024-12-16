@@ -18,7 +18,7 @@
             <div class="informacoes">
                 <p>nome Cliente</p>
                 <p>R$ {{pedido.valorTotal | number: '1.2-2' }}</p>
-                <p>{{pedido.dataPedido }}</p>
+                <p>{{pedido.dataPedido | date:'dd/MM/yyyy' }}</p>
             </div>
         </div>
 
