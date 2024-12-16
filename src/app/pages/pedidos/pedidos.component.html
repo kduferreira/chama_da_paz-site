@@ -1,86 +1,30 @@
 <div class="container_pedidos">
-    <div class="pedidos_container">
+    <div  class="pedidos_container">
 
-        <div class="pedido">
+        <div class="pedido" 
+            *ngFor="let pedido of pedidos"  
+            (click)="dataPedidoSelecionado(pedido) "
+         
+            [ngClass]="{pedidoSelecionado:pedidoSelecionado}"
+        
+            >
 
             <div class="status">
-                <h2>Pendente</h2>
+                <h2>{{pedido.status}}</h2>
 
-                <p>1</p>
+                <p>{{pedido.idPedido}}</p>
             </div>
 
             <div class="informacoes">
                 <p>nome Cliente</p>
-                <p>R$ 10000</p>
-                <p>horario do pedido</p>
+                <p>R$ {{pedido.valorTotal | number: '1.2-2' }}</p>
+                <p>{{pedido.dataPedido }}</p>
             </div>
         </div>
 
-        <!-- apagara resto -->
-
-        <div class="pedido">
-
-            <div class="status">
-                <h2>Pendente</h2>
-
-                <p>1</p>
-            </div>
-
-            <div class="informacoes">
-                <p>nome Cliente</p>
-                <p>R$ 10000</p>
-                <p>horario do pedido</p>
-            </div>
-        </div>
-
-        <div class="pedido">
-
-            <div class="status">
-                <h2>Pendente</h2>
-
-                <p>1</p>
-            </div>
-
-            <div class="informacoes">
-                <p>nome Cliente</p>
-                <p>R$ 10000</p>
-                <p>horario do pedido</p>
-            </div>
-        </div>
-
-        <div class="pedido">
-
-            <div class="status">
-                <h2>Pendente</h2>
-
-                <p>1</p>
-            </div>
-
-            <div class="informacoes">
-                <p>nome Cliente</p>
-                <p>R$ 10000</p>
-                <p>horario do pedido</p>
-            </div>
-        </div>
-        <div class="pedido">
-
-            <div class="status">
-                <h2>Pendente</h2>
-
-                <p>1</p>
-            </div>
-
-            <div class="informacoes">
-                <p>nome Cliente</p>
-                <p>R$ 10000</p>
-                <p>horario do pedido</p>
-            </div>
-        </div>
-<!-- 
-apagar ate aqui -->
     </div>
 
-    <div class="detalhes_pedido">
+    <div class="detalhes_pedido" *ngIf="mostrarDetalhesPedido">
 
         <div class="barra_superior">
 
@@ -89,7 +33,7 @@ apagar ate aqui -->
                 <p>Contato</p>
             </div>
 
-            <p>Id do pedido</p>
+            <p>{{pedidoSelecionado.idPedido}}</p>
 
             <div class="data">
                 <p>data do pedido</p>
@@ -135,59 +79,14 @@ apagar ate aqui -->
         </div>
 
 
-        <div class="pedidos">
+        <div class="pedidos"  *ngFor="let item of pedidoSelecionado.itensPedido">
             <h2>Pedidos</h2>
 
             <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
+                <p>{{item.nome}}</p>
+                <p>{{item.quantidade}}</p>
+                <p>{{item.precoTotal | number: '1.2-2'}}</p>
             </div>
-
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-            <div class="item">
-                <p>Nome do pedido</p>
-                <p>Quantidade</p>
-                <p>Preço total</p>
-            </div>
-
-
 
         </div>
 
