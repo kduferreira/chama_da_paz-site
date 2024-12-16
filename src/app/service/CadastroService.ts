@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CadastroService {
-  private apiUrl = 'https://pastelariaapi.onrender.com/api'; // Substitua pelo seu endpoint
+  private apiUrl = 'https://pastelariaapi.onrender.com/api'; 
 
   constructor(private http: HttpClient) {}
 
