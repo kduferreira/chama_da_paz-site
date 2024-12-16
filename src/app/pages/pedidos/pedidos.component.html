@@ -36,8 +36,8 @@
             <p>{{pedidoSelecionado.idPedido}}</p>
 
             <div class="data">
-                <p>data do pedido</p>
-                <p>Hora do pedido</p>
+                <p>{{pedidoSelecionado.dataPedido | date:'dd/MM/yyyy'}}</p>
+                <p>{{pedidoSelecionado.dataPedido | date:'HH:mm': 'America/Sao_Paulo'}}</p>
             </div>
 
             <div class="button-iniciar">
@@ -79,10 +79,10 @@
         </div>
 
 
-        <div class="pedidos"  *ngFor="let item of pedidoSelecionado.itensPedido">
+        <div class="pedidos" >
             <h2>Pedidos</h2>
 
-            <div class="item">
+            <div class="item"  *ngFor="let item of pedidoSelecionado.itensPedido">
                 <p>{{item.nome}}</p>
                 <p>{{item.quantidade}}</p>
                 <p>{{item.precoTotal | number: '1.2-2'}}</p>
