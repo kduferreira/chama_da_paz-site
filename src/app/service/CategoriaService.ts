@@ -14,6 +14,12 @@ export class CategoriaService {
     return this.http.get(this.apiUrl);
   }
 
+
+  buscarCategoriasAtivas(): Observable<any> {
+    const url = `${this.apiUrl}/ativos`;
+    return this.http.get(url);
+  }
+
   salvarCategoria(categoria: any): Observable<any> {
     console.log("salvando");
     

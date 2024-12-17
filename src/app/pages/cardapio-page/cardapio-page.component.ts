@@ -26,7 +26,7 @@ export class CardapioPageComponent {
  }
 
   async carregarCategorias(): Promise<void> {
-    this.categoriaService.buscarCategorias().subscribe(
+    this.categoriaService.buscarCategoriasAtivas().subscribe(
       (dados) => {
         console.log(dados);
         
