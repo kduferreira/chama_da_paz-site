@@ -20,6 +20,9 @@ export class ItensCardapioComponent {
 
   @Input()
   preco:number=0;
+  
+  @Input()
+  urlImagem:string =''
 
   valorTotal: number=0
 
