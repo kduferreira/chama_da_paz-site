@@ -110,6 +110,7 @@
     border-radius: 10px; 
 }
 
-.pedidoSelecionado{
-    border:1px solid green;
-}
+.selected {
+    border: 2px solid blue;
+    background-color: #f0f8ff; /* Fundo destacado */
+  }

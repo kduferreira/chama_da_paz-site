@@ -14,7 +14,7 @@ export class PedidosComponent {
 
   mostrarDetalhesPedido:boolean=false;
 
-  stylePedidoSelecionado:boolean=false
+  
 
   constructor(private pedidoService:PedidoService){}
 
@@ -59,14 +59,13 @@ export class PedidosComponent {
     
   }
 
-  verificarStyle(idPedido:number):void{
-    if(idPedido == this.pedidoSelecionado.idPedido){
-      this.stylePedidoSelecionado = true
-    }else{
-      this.stylePedidoSelecionado = false
-    }
-  }
+  // Variável para armazenar o índice da div selecionada
+  selectedIndex: number | null = null;
 
+  // Método chamado ao clicar na div
+  selecionarDiv(index: number): void {
+    this.selectedIndex = index;
+  }
 
 
 

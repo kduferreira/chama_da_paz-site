@@ -2,10 +2,10 @@
     <div  class="pedidos_container">
 
         <div class="pedido" 
-            *ngFor="let pedido of pedidos"  
-            (click)="dataPedidoSelecionado(pedido) "
-         
-            [ngClass]="{pedidoSelecionado:pedidoSelecionado}"
+            *ngFor="let pedido of pedidos; let i = index"  
+            (click)="dataPedidoSelecionado(pedido)"
+            [class.selected]="selectedIndex === i"          
+            (click)="selecionarDiv(i)"
         
             >
 
@@ -16,7 +16,7 @@
             </div>
 
             <div class="informacoes">
-                <p>nome Cliente</p>
+                <p>{{pedido.usuario.nome}}</p>
                 <p>R$ {{pedido.valorTotal | number: '1.2-2' }}</p>
                 <p>{{pedido.dataPedido | date:'dd/MM/yyyy' }}</p>
             </div>
@@ -29,8 +29,8 @@
         <div class="barra_superior">
 
             <div class="info_cliente">
-                <p>Nome completo</p>
-                <p>Contato</p>
+                <p>{{pedidoSelecionado.usuario.nome}}</p>
+                <p>{{pedidoSelecionado.usuario.telefone}}</p>
             </div>
 
             <p>{{pedidoSelecionado.idPedido}}</p>
@@ -49,22 +49,22 @@
         <div class="local">
             <div class="endereco">
                 <h3>Endereço </h3>
-                <p>Endereço de entrega</p>
+                <p>{{pedidoSelecionado.usuario.endereco}}</p>
             </div>
 
             <div class="endereco">
                 <h3>Bairro </h3>
-                <p>Bairro de entrega</p>
+                <p>{{pedidoSelecionado.usuario.bairro}}</p>
             </div>
 
             <div class="endereco">
                 <h3>Numero Residencia </h3>
-                <p>numero casa</p>
+                <p>{{pedidoSelecionado.usuario.numero}}</p>
             </div>
 
             <div class="endereco">
                 <h3>Complemento </h3>
-                <p>numero casa</p>
+                <p>{{pedidoSelecionado.usuario.complemento}}</p>
             </div>
            
 
