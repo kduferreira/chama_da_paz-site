@@ -24,6 +24,8 @@ export class ItensCarrrinhoComponent {
 
   @Input()
   precoTotal: number = this.precoItem
+  @Input()
+  urlImagem:string =''
 
   @Output() 
   totalCompra = new EventEmitter<number>();

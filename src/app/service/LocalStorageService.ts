@@ -9,7 +9,7 @@ export class LocalStorageService {
   constructor() {}
 
 
-  adicionarAoCarrinho(item: { id: number; nome: string; quantidade: number; preco: number; valorTotal:number }): void {
+  adicionarAoCarrinho(item: { id: number; nome: string; quantidade: number;urlImagem:string; preco: number; valorTotal:number }): void {
     let carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
 
     const itemExistente = carrinho.find((produto: any) => produto.id === item.id);

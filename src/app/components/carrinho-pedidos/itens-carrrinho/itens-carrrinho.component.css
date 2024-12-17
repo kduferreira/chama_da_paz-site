@@ -7,6 +7,14 @@
 }   
 .pedido{
     display: flex;
+    justify-content: center;
+    
+}
+.imgPedido{
+    width: 4em;
+    height: 4em;
+    margin-right: 10px;
+
 }
 .remover-item button{
     border: none;
