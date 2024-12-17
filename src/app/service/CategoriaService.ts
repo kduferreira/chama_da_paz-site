@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -19,6 +19,18 @@ export class CategoriaService {
     
     return this.http.post(this.apiUrl, categoria);
   }
+
+  // Método para enviar um POST com o ID 
+ alterarStatusCategoria(id: number): Observable<any> {
+  const url = `${this.apiUrl}/${id}`;
+  const headers = new HttpHeaders({
+    'Content-Type': 'application/json',
+  });
+
+  return this.http.post(url, null, { headers, responseType: 'text' }); // Esperando resposta como texto
+}
+
+
   
 
 }

@@ -6,12 +6,13 @@
            
 
                 <app-itens-cardapio *ngFor="let produto of produtos"
-                class="keen-slider__slide "
-                [idItem]="produto.idItem"
+                    class="keen-slider__slide"
+                    [idItem]="produto.idItem"
                     [nomeItem]="produto.nome"
                     [descricao]="produto.descricao" 
                     [preco]="produto.preco"
                     [urlImagem]="produto.urlImagem"
+                    
                 ></app-itens-cardapio>
       
         

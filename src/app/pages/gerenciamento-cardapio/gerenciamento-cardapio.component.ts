@@ -129,6 +129,20 @@ export class GerenciamentoCardapioComponent {
     
   }
 
+  mudarStatusCategoria(idCategoria:number){
+    console.log(idCategoria);
+    this.categoriaService.alterarStatusCategoria(idCategoria).subscribe({
+      next: (res) => {
+       
+        console.log('Resposta da API:', res);
+      },
+      error: (err) => {
+        console.error('Erro ao enviar POST:', err);
+      },
+    });
+    
+  }
+
   
   recarregarPagina() {
     window.location.reload();

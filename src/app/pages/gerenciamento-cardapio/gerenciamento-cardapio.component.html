@@ -8,7 +8,20 @@
         <div class="header">
           <h2>{{categoria.nome}}</h2>
           <div class="botoes">
+            <!-- Switch de Categoria -->
             <button (click)="openPopupItem(categoria.idCardapio)">Adicionar um item</button>
+            <div class="switch categoriaSwitchButton">
+              <input 
+                type="checkbox" 
+                [id]="'switch-cat-' + catIndex" 
+                [checked]="categoria.status" 
+                (change)="mudarStatusCategoria(categoria.idCardapio)"
+              
+              />
+              <label [for]="'switch-cat-' + catIndex">Toggle Categoria</label>
+            </div>
+  
+            <!-- Botão de Adicionar Item -->
           </div>
         </div>
   
@@ -30,15 +43,15 @@
               <td>{{item.nome}}</td>
               <td>{{item.descricao}}</td>
               <td>  
+                <!-- Switch de Item -->
                 <div class="switch">
-                  <!-- Usando [checked] para verificar o status -->
                   <input 
                     type="checkbox" 
-                    [id]="'switch-' + catIndex + '-' + itemIndex" 
+                    [id]="'switch-item-' + catIndex + '-' + itemIndex" 
                     [checked]="item.status" 
-                    (click)="mudarStatusItem(item.idItem)"
+                    (change)="mudarStatusItem(item.idItem)"
                   />
-                  <label [for]="'switch-' + catIndex + '-' + itemIndex">Toggle</label>
+                  <label [for]="'switch-item-' + catIndex + '-' + itemIndex">Toggle Item</label>
                 </div>
               </td>
               <td>R$ {{item.preco | number: '1.2-2'}}</td>

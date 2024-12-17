@@ -30,11 +30,20 @@
 
 }
 
+.botoes{
+    display: flex;
+
+}
+.categoriaSwitchButton{
+    margin-right: 5em;
+}
+
 .botoes button{
     padding: 1em;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 5em;
 }
 
 .tabela{
