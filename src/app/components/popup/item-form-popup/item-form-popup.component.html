@@ -1,31 +1,32 @@
 <div class="categoria">
-
-
     <h2 mat-dialog-title>Adicionar Nova Categoria</h2>
-
+  
     <mat-dialog-content>
-    <form [formGroup]="form">
+      <form [formGroup]="form">
         <mat-form-field appearance="fill" class="full-width">
-        
-        <input matInput formControlName="nome" placeholder="Digite o nome">
+          <input matInput formControlName="nome" placeholder="Digite o nome">
         </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="full-width">
+          <input matInput formControlName="descricao" placeholder="Digite a descrição">
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="full-width">
+          <input matInput type="text" formControlName="preco" placeholder="Digite o preço">
+        </mat-form-field>
+  
+        <!-- Novo Campo: Upload de Imagem -->
+        <div class="upload-container full-width">
+          <label for="fileInput">Escolha uma imagem:</label>
+          <input type="file" id="fileInput"formControlName="imagem" (change)="onFileSelected($event)" accept="image/*">
+        </div>
 
-        <mat-form-field appearance="fill" class="full-width">
-        
-        <textarea matInput formControlName="descricao" placeholder="Digite a descrição"></textarea>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" class="full-width">
-        
-        <input matInput type="text" formControlName="preco" placeholder="Digite o preço">
-        </mat-form-field>
-    </form>
+      </form>
     </mat-dialog-content>
-
+  
     <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancelar</button>
-    <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="submit()">Salvar</button>
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="submit()">Salvar</button>
     </mat-dialog-actions>
-
-</div>
-
+  </div>
+  

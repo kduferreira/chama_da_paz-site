@@ -9,6 +9,10 @@
     justify-content: center;
     align-items: center;
   }
+  .categoria{
+    display: flex;
+    flex-direction: column;
+  }
   
   .popup-content {
     background-color: white;

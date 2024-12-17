@@ -9,6 +9,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ItemFormPopupComponent {
   form: FormGroup;
+
+  selectedFile: File | null = null;
   
   constructor(
     private fb: FormBuilder,
@@ -18,11 +20,25 @@ export class ItemFormPopupComponent {
       nome: ['', Validators.required],
       descricao: ['', Validators.required],
       preco: [null, [Validators.required, Validators.min(0)]],
+      imagem:[null, Validators.required]
     });
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
+    }
   }
 
   submit() {
     if (this.form.valid) {
+     
+      this.form.value.file = this.selectedFile
+
+      console.log(this.form.value);
+      
+      
       this.dialogRef.close(this.form.value); // Retorna os dados ao fechar o modal
     }
   }

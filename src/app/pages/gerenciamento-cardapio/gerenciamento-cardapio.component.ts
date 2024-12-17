@@ -15,6 +15,8 @@ export class GerenciamentoCardapioComponent {
   constructor(private itemService:ItemService, private categoriaService:CategoriaService,  private dialog: MatDialog){}
   idCategoria:number = 0;
   categorias: any[] = [];
+//imagem para o item
+  file!: File; 
 
   ngOnInit(): void {
      this.carregarCategorias();
@@ -39,7 +41,7 @@ export class GerenciamentoCardapioComponent {
 
   openPopupCategoria() {
     const dialogRef = this.dialog.open(CategoriaPopupComponent, {
-      width: '400px',
+      
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -66,19 +68,37 @@ export class GerenciamentoCardapioComponent {
 
   openPopupItem(idCategoria:number) {
 
-    console.log(idCategoria);
+    
     
     const dialogRef = this.dialog.open(ItemFormPopupComponent, {
-      width: '400px',
+      width: '350px',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      //add id de categoria selecionada ao resultado
-      result.id_categoria = idCategoria
+      
+      
+     
       if (result) {
+        //add id de categoria selecionada ao resultado
+      result.id_categoria = idCategoria
+
+      this.file = result.file
+
+    
+      const resultToApi= {
+        
+      
+        nome: result.nome,
+        descricao: result.descricao,
+        preco: result.preco,
+        id_categoria: idCategoria
+       
+      };
+
+      
         
           // Aqui você pode salvar os dados em um backend ou exibi-los em outro componente.
-          this.itemService.salvarItem(result).subscribe({
+          this.itemService.salvarItem(resultToApi, this.file).subscribe({
 
             next: (response) => {
               console.log('Item salvo com sucesso:', response);

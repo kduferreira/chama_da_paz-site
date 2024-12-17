@@ -12,10 +12,16 @@ export class ItemService {
 
  
 
-  salvarItem(item: any): Observable<any> {
-   
-    
-    return this.http.post(this.apiUrl, item);
+  salvarItem(item: any, file: File): Observable<any> {
+    const formData: FormData = new FormData();
+
+    // Adiciona os dados do item como JSON
+    formData.append('data', JSON.stringify(item));
+
+    // Adiciona a imagem ao formData
+    formData.append('file', file);
+
+    return this.http.post<any>(this.apiUrl, formData);
   }
   
 
