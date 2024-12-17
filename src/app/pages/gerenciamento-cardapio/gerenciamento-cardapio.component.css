@@ -49,3 +49,11 @@ th, td {
     text-align: left;
     font-size: 20px;
 }
+.imgItem {
+    width: 5em;
+}
+
+.imgItem img{
+    width: 4em;
+    height: 4em;
+}
