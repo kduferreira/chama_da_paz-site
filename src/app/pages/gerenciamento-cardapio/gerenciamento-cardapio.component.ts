@@ -114,6 +114,21 @@ export class GerenciamentoCardapioComponent {
     });
   }
 
+
+  mudarStatusItem(idItem:number){
+    console.log(idItem);
+    this.itemService.alterarStatus(idItem).subscribe({
+      next: (res) => {
+       
+        console.log('Resposta da API:', res);
+      },
+      error: (err) => {
+        console.error('Erro ao enviar POST:', err);
+      },
+    });
+    
+  }
+
   
   recarregarPagina() {
     window.location.reload();

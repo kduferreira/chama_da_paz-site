@@ -1,55 +1,51 @@
 <div class="container_ger-cardapio">
     <div class="nova_categoria">
-        <button (click)="openPopupCategoria()">Adicionar nova Categoria</button>
+      <button (click)="openPopupCategoria()">Adicionar nova Categoria</button>
     </div>
-
-    <div *ngFor="let categoria of categorias">
-
-   
-
-   
-    <div class="categoria">
-
+  
+    <div *ngFor="let categoria of categorias; let catIndex = index">
+      <div class="categoria">
         <div class="header">
-
-            <h2>{{categoria.nome}}</h2>
-    
-            <div class="botoes">
-                <button (click)="openPopupItem(categoria.idCardapio)">Adicionar um item</button>
-            </div>
-
+          <h2>{{categoria.nome}}</h2>
+          <div class="botoes">
+            <button (click)="openPopupItem(categoria.idCardapio)">Adicionar um item</button>
+          </div>
         </div>
-
+  
         <table class="tabela">
-            <thead class="cabecario">
-                <tr>
-                    <th>Imagem</th>
-                    <th>Item</th>
-                    <th>Descrição</th>
-                    <th>Status</th>
-                    <th>Preço</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let item of categoria.itens">
-                    <td class="imgItem">
-                        <img src="{{item.urlImagem}}" alt="">
-                    </td>
-                    <td>{{item.nome}}</td>
-                    <td>{{item.descricao}}</td>
-                    <td>{{item.status}}</td>
-                    <td>R$ {{item.preco | number: '1.2-2'}}</td>
-                </tr>
-             
-               
-              
-            </tbody>
+          <thead class="cabecario">
+            <tr>
+              <th>Imagem</th>
+              <th>Item</th>
+              <th>Descrição</th>
+              <th>Status</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of categoria.itens; let itemIndex = index">
+              <td class="imgItem">
+                <img src="{{item.urlImagem}}" alt="">
+              </td>
+              <td>{{item.nome}}</td>
+              <td>{{item.descricao}}</td>
+              <td>  
+                <div class="switch">
+                  <!-- Usando [checked] para verificar o status -->
+                  <input 
+                    type="checkbox" 
+                    [id]="'switch-' + catIndex + '-' + itemIndex" 
+                    [checked]="item.status" 
+                    (click)="mudarStatusItem(item.idItem)"
+                  />
+                  <label [for]="'switch-' + catIndex + '-' + itemIndex">Toggle</label>
+                </div>
+              </td>
+              <td>R$ {{item.preco | number: '1.2-2'}}</td>
+            </tr>
+          </tbody>
         </table>
-
-
-
-
-
+      </div>
     </div>
-</div>
-</div>
+  </div>
+  
