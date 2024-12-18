@@ -1,0 +1,59 @@
+
+.container-finalizar{
+    display:flex;
+    flex-direction: row;
+    padding: 1em;
+    height: 56em;
+}
+.info-finlizar{
+    width: 65%;
+}
+
+.carrinho{
+    width: 30%;
+}
+
+.opcoes-entrega{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-entrega{
+    border: 1px solid #ccc;
+    padding: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+  
+.endereco{
+    display: flex;
+    flex-direction: row;
+}
+
+.observacao{
+    width: 40em;
+    height: 10em;
+}
+
+.pagamento{
+    display: flex;
+    flex-direction: row;
+}
+.container-entrega-pagamento{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+  .container-entrega:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selecionado {
+    border: 2px solid #00c3ff;
+    background-color: #e6f7ff;
+    box-shadow: 0 0 5px #00c3ff;
+  }

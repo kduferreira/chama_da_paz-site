@@ -6,6 +6,7 @@ import { AcessoUsuarioComponent } from './pages/acesso-usuario/acesso-usuario.co
 import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/gerenciamento-cardapio.component';
+import { FinalizarPedidoComponent } from './pages/finalizar-pedido/finalizar-pedido.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,9 @@ const routes: Routes = [
 
   {
     path:"painel", component: GerenciamentoCardapioComponent
+  },
+  {
+    path:"finalizar", component:FinalizarPedidoComponent
   }
 
 

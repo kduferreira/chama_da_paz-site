@@ -40,6 +40,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CategoriaPopupComponent } from './components/popup/categoria-popup/categoria-popup.component';
 import { ItemFormPopupComponent } from './components/popup/item-form-popup/item-form-popup.component';
+import { FinalizarPedidoComponent } from './pages/finalizar-pedido/finalizar-pedido.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +71,8 @@ import { ItemFormPopupComponent } from './components/popup/item-form-popup/item-
     GerenciamentoCardapioComponent,
 
     CategoriaPopupComponent,
-     ItemFormPopupComponent
+     ItemFormPopupComponent,
+     FinalizarPedidoComponent
   ],
   imports: [
     BrowserModule,
