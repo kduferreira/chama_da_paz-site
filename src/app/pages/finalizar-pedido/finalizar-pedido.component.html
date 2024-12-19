@@ -1,10 +1,10 @@
 
 <div class="container-finalizar">
     <div class="info-finlizar">
-        <h1>FINALIZAR PEDIDO</h1>
+        <h1 class="txt-finalizar">FINALIZAR PEDIDO</h1>
         <hr>
 
-        <h1>OPÇÕES DE ENTREGA</h1>
+        <h1 class="txt-finalizar">OPÇÕES DE ENTREGA</h1>
         <div class="opcoes-entrega"> 
             <div 
               class="container-entrega " 
@@ -23,7 +23,7 @@
            
           </div>
           
-        <h1 *ngIf="tipoEntrega != 'local'">ENDEREÇO DE ENTREGA</h1>
+        <h1  class="txt-finalizar" *ngIf="tipoEntrega != 'local'">ENDEREÇO DE ENTREGA</h1>
         <div *ngIf="tipoEntrega != 'local'" class="endereco">
           
             <div class="container-entrega retirar-estabelecimento">
@@ -37,11 +37,11 @@
         </div>
 
 
-        <h1>OBSERVAÇÕES</h1>
+        <h1 class="txt-finalizar">OBSERVAÇÕES</h1>
 
         <textarea class="observacao" name="" id=""></textarea>
 
-        <h1>FORMA DE PAGAMENTO</h1>
+        <h1 class="txt-finalizar">FORMA DE PAGAMENTO</h1>
         <div class="pagamento">
             <div *ngIf="tipoEntrega != 'local'" class="container-entrega-pagamento">
                 

@@ -9,6 +9,10 @@
     width: 65%;
 }
 
+.txt-finalizar{
+    margin-bottom: 0.5em;
+}
+
 .carrinho{
     width: 30%;
 }
@@ -23,6 +27,9 @@
     padding: 1em;
     cursor: pointer;
     transition: 0.3s;
+    margin: 0.8em;
+    width: 15em;
+    border-radius: 5px;
 }
 
 
