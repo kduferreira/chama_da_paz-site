@@ -1,0 +1,168 @@
+.carrinho_pedidos{
+    background-color: #1F1F1D;
+        
+    border:3px solid #FFCF00;
+}
+
+.title-pedidos{
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    background-color: #FFCF00;
+    align-items: center;
+    font-family: "Oleo Script", system-ui;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.title-pedidos h1{
+   margin-left: 0.5em;
+   font-size: 40px;
+}
+
+.title-pedidos img{
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 0.5em;
+}
+
+.SemItem{
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    justify-content:center;
+   
+    
+}
+.sem-pedido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   max-height: 80%;
+    
+}
+
+
+
+
+
+.SemItem  h2{
+    font-size: 30px ;
+}
+
+.SemItem  p{
+    font-size: 20px ;
+}
+
+
+.comItem{
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    justify-content: space-between;
+}
+
+.container_finalizar-pedido{
+   
+}
+
+.pedidos{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.total-preco{
+    display: flex;
+    background-color: bisque;
+    width: 100%;
+    padding: 1em;
+    justify-content: center;
+}
+
+.total-preco p{
+   
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.butao-finalizar {
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.butao-finalizar button{
+ 
+    cursor: pointer;
+    padding: 1em 2em;
+}
+
+
+/* CSS dos item */
+.itens_conteiner{
+    border:1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
+}   
+.pedido{
+    display: flex;
+    justify-content: center;
+    
+}
+.imgPedido{
+    width: 4em;
+    height: 4em;
+    margin-right: 10px;
+
+}
+.remover-item button{
+    border: none;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+#menos{
+    color: red;
+   width: 2em;
+    padding: 5px;
+}
+#mais{
+    color: green;
+    padding: 5px;
+    width: 2em;
+}
+
+
+.container_quantidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_quantidade p{
+    margin-top:0.5em;
+    font-weight: bold;
+}
+
+.quantidade_button{
+    display: flex;
+    justify-content: space-between;
+
+  
+   
+    border: 1px solid black;
+}
+
+.quantidade_button p{
+    padding: 0.5em;
+  
+}
+
+

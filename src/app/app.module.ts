@@ -41,6 +41,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CategoriaPopupComponent } from './components/popup/categoria-popup/categoria-popup.component';
 import { ItemFormPopupComponent } from './components/popup/item-form-popup/item-form-popup.component';
 import { FinalizarPedidoComponent } from './pages/finalizar-pedido/finalizar-pedido.component';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +73,8 @@ import { FinalizarPedidoComponent } from './pages/finalizar-pedido/finalizar-ped
 
     CategoriaPopupComponent,
      ItemFormPopupComponent,
-     FinalizarPedidoComponent
+     FinalizarPedidoComponent,
+     CarrinhoComponent
   ],
   imports: [
     BrowserModule,
