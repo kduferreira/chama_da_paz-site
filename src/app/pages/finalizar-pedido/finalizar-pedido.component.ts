@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class FinalizarPedidoComponent {
   tipoEntrega: string = 'local'; // Valor inicial: 'ENTREGA EM DOMICÍLIO'
 
+
+  formaPagemento:string = "dinheiro"
+
   
 
 
@@ -15,6 +18,12 @@ export class FinalizarPedidoComponent {
     this.tipoEntrega = tipo;
     console.log(`Entrega selecionada: ${this.tipoEntrega}`);
   }
+
+  selecionarFormaPagamento(pagamento: string): void {
+    this.formaPagemento = pagamento;
+    console.log(`Entrega selecionada: ${this.formaPagemento}`);
+  }
+
 
 
 

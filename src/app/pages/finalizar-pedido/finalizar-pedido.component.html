@@ -44,27 +44,42 @@
         <h1>FORMA DE PAGAMENTO</h1>
         <div class="pagamento">
             <div *ngIf="tipoEntrega != 'local'" class="container-entrega-pagamento">
-                <div class="container-entrega retirar-estabelecimento">
+                
+                <div 
+                    [class.selecionado]="formaPagemento === 'dinheiro'" 
+                    (click)="selecionarFormaPagamento('dinheiro')"
+                    class="container-entrega retirar-estabelecimento">
                     <h3>DINHEIRO</h3>
                     <p>Truco para</p>
                     <input type="text">0
 
                 </div>
-                <div class="container-entrega retirar-estabelecimento">
+                <div 
+                [class.selecionado]="formaPagemento === 'credito'" 
+                (click)="selecionarFormaPagamento('credito')"
+                    class="container-entrega retirar-estabelecimento">
                     <h3>Cartao de Crédito</h3>
                     <p>(Entregador)</p>
                 </div>
-                <div class="container-entrega retirar-estabelecimento">
+                <div 
+                [class.selecionado]="formaPagemento === 'debito'" 
+                (click)="selecionarFormaPagamento('debito')"
+                    class="container-entrega retirar-estabelecimento">
                     <h3>Cartão de Débito</h3>
                     <p>(Entregador)</p>
                 </div>
-                <div class="container-entrega retirar-estabelecimento">
-                    <h3>Pix</h3>
+                <div 
+                [class.selecionado]="formaPagemento === 'pix'" 
+                (click)="selecionarFormaPagamento('pix')"
+                class="container-entrega retirar-estabelecimento">
+                    
+                <h3>Pix</h3>
                     
                 </div>
             </div>
             <div 
                 [class.selecionado]="tipoEntrega === 'local'" 
+                                
                 *ngIf="tipoEntrega == 'local'" class="container-entrega retirar-estabelecimento">
                 <h3>Pagar no Estabelecimento</h3>
                 
