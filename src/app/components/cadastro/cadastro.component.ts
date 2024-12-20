@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CadastroService } from 'src/app/service/CadastroService';
+import { LoginService } from 'src/app/service/LoginService';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,7 +12,7 @@ export class CadastroComponent {
   isPasswordVisible1 = false;
   isPasswordVisible2 = false;
 
-
+  constructor( private cadastroService: CadastroService){}
 
   
   usuario = {
@@ -53,7 +54,7 @@ export class CadastroComponent {
     
   }
   
-  constructor(private cadastroService: CadastroService) {}
+
 
   togglePasswordVisibility(): void {
     this.isPasswordVisible1 = !this.isPasswordVisible1;
@@ -126,6 +127,8 @@ if(this.validateFields()  && !this.isFieldEmpty("nome")
 
   
   }
+
+
 
 
 }

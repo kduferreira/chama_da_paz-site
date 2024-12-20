@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CategoriaService {
-  private apiUrl = 'https://pastelariaapi.onrender.com/api/categoria'; // Substitua pelo seu endpoint
+  private apiUrl = 'https://pastelariaapi.onrender.com'; // Substitua pelo seu endpoint
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class CategoriaService {
 
 
   buscarCategoriasAtivas(): Observable<any> {
-    const url = `${this.apiUrl}/ativos`;
+    const url = `${this.apiUrl}/categoria/ativos`;
     return this.http.get(url);
   }
 

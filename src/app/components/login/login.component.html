@@ -1,4 +1,4 @@
-<form class="campo-login">
+<div class="campo-login">
 
     <div class="texto-login">
         <img src="../../../assets/images/icon-chave.png" alt="">
@@ -10,7 +10,9 @@
       <div class="fundo-input">
 
         <label for="">EMAIL</label>
-        <input class="input-text" type="email" placeholder="DIGITE SEU EMAIL">
+        <input 
+        [(ngModel)]="usuarioLogin.email"
+          class="input-text" type="email" placeholder="DIGITE SEU EMAIL">
 
       </div>
 
@@ -21,7 +23,10 @@
         <input class="input-text"
           [type]="isPasswordVisible1 ? 'text' : 'password'" 
           id="password" 
-          placeholder="Senha" >
+          placeholder="Senha" 
+          [(ngModel)]="usuarioLogin.senha"
+          
+          >
       </div>
       
 
@@ -31,7 +36,7 @@
 
           <div class="button">
 
-            <button>ENTRAR</button>
+            <button (click)="loginUsuario()">ENTRAR</button>
             <a href="">ESQUECEU A SENHA</a>
           </div>
 
@@ -40,4 +45,4 @@
    
 
 
-</form>
+  </div>
