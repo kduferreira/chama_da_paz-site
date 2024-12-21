@@ -36,12 +36,13 @@ export class ItemService {
 
     // Método para enviar um POST com o ID 
     alterarStatus(id: number): Observable<any> {
-      const url = `${this.apiUrl}/${id}`;
-      const headers = new HttpHeaders({
-        'Content-Type': 'application/json',
-      });
+      const url = `${this.apiUrl}/admin/item/${id}`;
+      const headers = this.token 
+    ? { Authorization: `${this.token}` } 
+    : undefined;
+     
     
-      return this.http.post(url, null, { headers, responseType: 'text' }); // Esperando resposta como texto
+      return this.http.post(url, null, {headers}); // Esperando resposta como texto
     }
   
 
