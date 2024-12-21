@@ -13,6 +13,9 @@ export class CategoriaService {
   
 
   buscarCategorias(): Observable<any> {
+
+    console.log(this.token );
+    
     const url = `${this.apiUrl}/admin/categoria`;
  
 

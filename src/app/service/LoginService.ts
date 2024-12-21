@@ -6,7 +6,7 @@ import { catchError, Observable, tap, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  private apiUrl = 'http://localhost:8080'; 
+  private apiUrl = 'https://pastelariaapi.onrender.com'; 
 
   constructor(private http: HttpClient) {}
 

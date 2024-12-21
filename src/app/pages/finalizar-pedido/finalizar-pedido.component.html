@@ -24,16 +24,22 @@
           </div>
           
         <h1  class="txt-finalizar" *ngIf="tipoEntrega != 'local'">ENDEREÇO DE ENTREGA</h1>
-        <div *ngIf="tipoEntrega != 'local'" class="endereco">
-          
+        <div *ngIf="tipoEntrega != 'local'" class="endereco"
+      
+        >
+          <div  *ngFor="let endereco of infoUser.enderecos">
             <div class="container-entrega retirar-estabelecimento">
                 <h3>Endereço pricipal</h3>
+                <p>{{endereco.endereco}},{{endereco.numero}} </p>
+                <p>{{endereco.bairro}}</p>
+                <p>{{endereco.complemento}}</p>
                 <p>tempo estimado: 10 Min</p>
             </div>
             <div class="container-entrega retirar-estabelecimento">
                 <h3>Cadastrar Novo Endereço</h3>
                 <p>Novo Endereço</p>
             </div>
+        </div>
         </div>
 
 
