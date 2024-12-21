@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/service/LoginService';
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent {
  
 
   
-  constructor(private loginService:LoginService){}
+  constructor(private loginService:LoginService, private router: Router){}
  
 
   togglePasswordVisibility(): void {
@@ -33,13 +34,14 @@ export class LoginComponent {
        
         console.log(response);
         
-         alert('logado!');
-   
+         
+         this.router.navigate(['/finalizar']);
         
       
       },
       (error) => {
         console.error('Erro ao logar:', error);
+        this.usuarioLogin.senha =''
         alert('Erro ao loga.');
       }
     );

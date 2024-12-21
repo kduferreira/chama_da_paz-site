@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { CadastroService } from 'src/app/service/CadastroService';
+import { LoginService } from 'src/app/service/LoginService';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,7 +13,7 @@ export class CadastroComponent {
   isPasswordVisible1 = false;
   isPasswordVisible2 = false;
 
-  constructor(private cadastroService: CadastroService) { }
+  constructor(private cadastroService: CadastroService,private loginService:LoginService, private router: Router) { }
 
   usuario = {
     nome: "",
@@ -104,8 +106,15 @@ export class CadastroComponent {
     this.cadastroService.cadastrarUsuario(usuarioComEndereco).subscribe(
       (response) => {
         alert('Usuário cadastrado com sucesso!');
+
+        const dataLogin ={
+          email:this.usuario.email,
+          senha:this.usuario.senha
+        }
         // Resetando o formulário
         this.resetForm();
+
+        this.loginUsuario(dataLogin)
       },
       (error) => {
         console.error('Erro ao cadastrar usuário:', error);
@@ -138,4 +147,31 @@ export class CadastroComponent {
 
     this.showErrors = false;
   }
+
+
+
+
+  loginUsuario(data:any){
+
+    this.loginService.logarUsuario(data).subscribe(
+      (response) => {
+       
+        console.log(response);
+        
+        this.router.navigate(['/finalizar']);
+   
+        
+      
+      },
+      (error) => {
+        console.error('Erro ao logar:', error);
+        alert('Erro ao loga.');
+      }
+    );
+    
+      
+      
+      
+  }
+
 }
