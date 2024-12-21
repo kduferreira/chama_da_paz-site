@@ -7,12 +7,22 @@ import { Observable } from 'rxjs';
 })
 export class CategoriaService {
   private apiUrl = 'https://pastelariaapi.onrender.com'; // Substitua pelo seu endpoint
-
+   private token = localStorage.getItem('token'); // Obtém o token do Local Storage
   constructor(private http: HttpClient) {}
 
+  
+
   buscarCategorias(): Observable<any> {
-    return this.http.get(this.apiUrl);
+    const url = `${this.apiUrl}/admin/categoria`;
+ 
+
+    const headers = this.token 
+      ? { Authorization: `${this.token}` } 
+      : undefined;
+
+    return this.http.get(url, { headers });
   }
+  
 
 
   buscarCategoriasAtivas(): Observable<any> {
@@ -21,9 +31,14 @@ export class CategoriaService {
   }
 
   salvarCategoria(categoria: any): Observable<any> {
-    console.log("salvando");
+    const headers = this.token 
+    ? { Authorization: `${this.token}` } 
+    : undefined;
+
+
+    const url = `${this.apiUrl}/admin/categoria`;
     
-    return this.http.post(this.apiUrl, categoria);
+    return this.http.post(url, categoria,{ headers });
   }
 
   // Método para enviar um POST com o ID 

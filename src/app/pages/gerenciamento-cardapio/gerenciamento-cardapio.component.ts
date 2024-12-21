@@ -51,7 +51,8 @@ export class GerenciamentoCardapioComponent {
         this.categoriaService.salvarCategoria(result).subscribe({
           next: (response) => {
             console.log('Categoria salva com sucesso:', response);
-            window.location.reload();
+            //this.categorias.push(this.file)
+             window.location.reload();
           },
           error: (err) => {
             console.error('Erro ao salvar categoria:', err);
@@ -91,7 +92,7 @@ export class GerenciamentoCardapioComponent {
         nome: result.nome,
         descricao: result.descricao,
         preco: result.preco,
-        id_categoria: idCategoria
+        idCategoria: idCategoria
        
       };
 
@@ -102,7 +103,8 @@ export class GerenciamentoCardapioComponent {
 
             next: (response) => {
               console.log('Item salvo com sucesso:', response);
-              window.location.reload();
+            
+             window.location.reload();
             },
             error: (err) => {
               console.error('Erro ao salvar categoria:', err);

@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ItemService {
-  private apiUrl = 'https://pastelariaapi.onrender.com/api/item'; // Substitua pelo seu endpoint
-
+  private apiUrl = 'https://pastelariaapi.onrender.com'; // Substitua pelo seu endpoint
+  private token = localStorage.getItem('token'); // Obtém o token do Local Storage
   constructor(private http: HttpClient) {}
 
  
@@ -15,13 +15,20 @@ export class ItemService {
   salvarItem(item: any, file: File): Observable<any> {
     const formData: FormData = new FormData();
 
+    const url = `${this.apiUrl}/admin/item`;
+
     // Adiciona os dados do item como JSON
     formData.append('data', JSON.stringify(item));
 
+
+
     // Adiciona a imagem ao formData
     formData.append('file', file);
+    const headers = this.token 
+    ? { Authorization: `${this.token}` } 
+    : undefined;
 
-    return this.http.post<any>(this.apiUrl, formData);
+    return this.http.post<any>(url, formData,{headers});
   }
 
 
