@@ -27,7 +27,7 @@
         <div *ngIf="tipoEntrega != 'local'" class="endereco"
       
         >
-          <div  *ngFor="let endereco of infoUser.enderecos">
+          <div class="endereco" *ngFor="let endereco of infoUser.enderecos">
             <div class="container-entrega retirar-estabelecimento">
                 <h3>Endereço pricipal</h3>
                 <p>{{endereco.endereco}},{{endereco.numero}} </p>
