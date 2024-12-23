@@ -19,11 +19,14 @@ infoUser:any
 
   formaPagemento:string = "dinheiro"
 
+  enderecoSelecionado:string = "principal"
+//  enderecoSelecionado: any = null; // Variável para armazenar o endereço selecionado
   ngOnInit(): void {
    
    this.buscarInfoUser()
-
-   console.log(this.infoUser);
+  
+ 
+   
    
  }
 
@@ -35,19 +38,44 @@ infoUser:any
     console.log(`Entrega selecionada: ${this.tipoEntrega}`);
   }
 
+
+ 
+  infoEndereco = {
+    enderecos: [
+      { endereco: 'Rua A', numero: 123, bairro: 'Centro', complemento: 'Apt 101' },
+      { endereco: 'Rua B', numero: 456, bairro: 'Bairro Novo', complemento: 'Casa' },
+      // Adicione outros endereços aqui
+    ]
+  };
+
+  selecionarEndereco(endereco: any): void {
+   
+    
+   
+    this.enderecoSelecionado = endereco;
+    console.log('Endereço selecionado:', endereco);
+  }
+
+  abrirCadastroNovoEndereco(): void {
+    console.log('Abrir modal para cadastrar novo endereço');
+    // Lógica para abrir um modal ou redirecionar para a página de cadastro de novo endereço
+  }
+
   selecionarFormaPagamento(pagamento: string): void {
     this.formaPagemento = pagamento;
-    console.log(`Entrega selecionada: ${this.formaPagemento}`);
+    console.log(`Forma de pagamento: ${this.formaPagemento}`);
   }
+
+ 
 
 
 
   async buscarInfoUser(): Promise<void> {
     this.usuarioService.buscarInfoUsuario().subscribe(
       (dados) => {
-        console.log(dados);
-        
         this.infoUser = dados
+
+      this.enderecoSelecionado = dados.enderecos[0]
       },
       (erro) => {
         console.error('Erro ao buscar info usuario:', erro); // Tratamento de erros
