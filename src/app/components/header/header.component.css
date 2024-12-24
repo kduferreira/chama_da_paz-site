@@ -1,102 +1,104 @@
-/* Layout padrão da Navbar */
-.navbar {
+/* Estilos base */
+.container-header {
+    color: #fff;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
-    margin: 0 5em;
     align-items: center;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+    padding: 1.5rem 2rem;
+  }
+  
+  ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.navbar ul li {
-    margin: 2em 1em;
-}
-
-.navbar a {
+  }
+  
+  .menu-left,
+  .menu-right {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .menu-left li a,
+  .menu-right li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 25px;
-    color: white;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 1024px) {
-    .navbar {
-        flex-direction: column; /* Coloca os itens em coluna em telas menores */
-        margin: 0 2em; /* Ajusta a margem */
+    font-size: 18px;
+  }
+  
+  .logo img {
+    max-width: 120px;
+  }
+  
+  /* Menu Mobile */
+  .mobile-menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    display: none;
+    background-color: #333;
+    padding: 0.5rem; /* Reduz o preenchimento interno para aproximar mais o menu do topo */
+  }
+  
+  /* Quando o menu está aberto */
+  .mobile-menu.open {
+    display: block;
+    margin-top: 0; /* Remove o espaço adicional acima do menu */
+  }
+  
+  /* Links do menu mobile */
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Reduz o espaçamento entre os itens */
+    text-align: center;
+  }
+  
+  .mobile-menu ul li a {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 750px) {
+    .menu-left,
+    .menu-right {
+      display: none; /* Esconde os menus desktop */
     }
-
-    .navbar ul {
-        flex-direction: column; /* Menu também fica em coluna */
-        width: 100%; /* Ocupa toda a largura disponível */
-        align-items: center; /* Alinha os itens no centro */
+  
+    .mobile-menu-icon {
+      display: block; /* Exibe o botão do menu mobile */
     }
-
-    .navbar ul li {
-        margin: 1em 0; /* Menor margem */
+  
+    .mobile-menu {
+      display: none;
     }
-
-    .navbar img {
-        width: 150px; /* Ajusta o tamanho da logo */
-        height: auto;
-        margin-bottom: 1em; /* Espaço abaixo da logo */
+  
+    .mobile-menu.open {
+      display: block;
+      margin-top: 0; /* Remove qualquer margem desnecessária acima do menu */
     }
-
-    .navbar a {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
+  
+    .logo img {
+      max-width: 100px; /* Ajusta a logo para telas menores */
     }
-}
-
-@media (max-width: 768px) {
-    /* Ajusta para telas menores, como tablets */
-    .navbar {
-        margin: 0 1em; /* Menor margem */
+  }
+  
+  @media screen and (min-width: 750px) {
+    .mobile-menu {
+      display: none;
     }
-
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
+  
+    .menu-left,
+    .menu-right {
+      display: flex; /* Exibe os menus no desktop */
     }
-
-    .navbar ul li {
-        margin: 0.5em 0;
-    }
-
-    .navbar a {
-        font-size: 18px; /* Ajusta o tamanho da fonte */
-    }
-
-    .navbar img {
-        width: 120px; /* Tamanho menor da logo */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajusta para telas muito pequenas, como smartphones em modo retrato */
-    .navbar a {
-        font-size: 16px; /* Menor fonte para telas muito pequenas */
-    }
-
-    .navbar {
-        margin: 0;
-    }
-
-    .navbar img {
-        width: 100px; /* Logo ainda menor */
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center; /* Centraliza os itens */
-        width: 100%;
-    }
-
-    .navbar ul li {
-        margin: 0.5em 0;
-    }
-}
+  }
+  

@@ -1,21 +1,40 @@
 <app-menu-info></app-menu-info>
 
 <div class="container-header">
-    <nav class="navbar">
+  <nav class="navbar">
+    <!-- Menu esquerdo -->
+    <ul class="menu-left">
+      <li><a (click)="toBeneficios()">Benefícios</a></li>
+      <li><a (click)="toFuncionalidades()">Funcionalidades</a></li>
+      <li><a (click)="toPlanos()">Planos</a></li>
+    </ul>
 
-        <ul>
-            <li><a routerLink="" href="">Home</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Contato</a></li>
-        </ul>
+    <!-- Logo -->
+    <div class="logo">
+      <img src="../../../assets/images/chama-logo.png" alt="Logo">
+    </div>
 
-       <img src="../../../assets/images/chama-logo.png" alt="">
+    <!-- Menu direito -->
+    <ul class="menu-right">
+      <li><a (click)="toFeedbacks()">Feedbacks</a></li>
+      <li><a routerLink="/cadastro" href="">Registrar</a></li>
+      <li><a (click)="toRegister()">Entrar</a></li>
+    </ul>
 
-        <ul>
-            <li><a routerLink="/cadastro" href="">Entrar</a></li>
-            <li><a routerLink="/cadastro" href="">Registrar</a></li>
-            <li><a href="">Meus Pedidos</a></li>
-        </ul>
+    <!-- Botão de menu para mobile -->
+    <button class="mobile-menu-icon" aria-label="Abrir menu" (click)="menuShow()">
+      <img class="icon" src="../../../assets/images/menu_white_36dp.svg" alt="Menu">
+    </button>
+  </nav>
 
-    </nav>
+  <!-- Menu mobile -->
+  <div class="mobile-menu">
+    <ul>
+      <li><a (click)="toBeneficios()">Benefícios</a></li>
+      <li><a (click)="toFuncionalidades()">Funcionalidades</a></li>
+      <li><a (click)="toPlanos()">Planos</a></li>
+      <li><a (click)="toFeedbacks()">Feedbacks</a></li>
+      <li><a (click)="toRegister()">Entrar</a></li>
+    </ul>
+  </div>
 </div>
