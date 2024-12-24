@@ -15,11 +15,15 @@
 
     <div class="comItem" *ngIf="carrinho.length > 0" >
             <div class="pedidos" >
-                <app-itens-carrrinho
+                <app-itens-carrrinho (totalCompra)="receberTotalCompra($event)"
+             
                 *ngFor="let item of carrinho"
+                [id]="item.id"
                 [quantidade]="item.quantidade"
                 [precoItem]="item.preco"
-                [nomeItem]="item.nome"></app-itens-carrrinho>
+                [nomeItem]="item.nome"
+                [urlImagem]="item.urlImagem"
+                ></app-itens-carrrinho>
             </div>
             
             
@@ -30,7 +34,7 @@
                 class="container_finalizar-pedido">
                 
                 <div class="total-preco">
-                    <p>VALOR TOTAL R$ teste</p>
+                    <p>VALOR TOTAL R$ {{totalCompra |number: '1.2-2'}}</p>
                 </div>
 
                 <div class="butao-finalizar">

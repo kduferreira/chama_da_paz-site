@@ -1,0 +1,69 @@
+<div class="carrinho_pedidos">
+    <div class="title-pedidos">
+        <img src="../../../assets/images/icon-caderno.png" alt="">
+        <h1>MEU  PEDIDO</h1>
+    </div>
+
+    <div class="SemItem">
+
+        <div class="sem-pedido" *ngIf="carrinho.length == 0">
+            <h2>SEU PEDIDO ESTA VAZIO</h2>
+            <p>ADICIONE ITENS</p>
+        </div>
+
+  
+
+       
+        <div class="pedidos" >
+
+            <div class="itens_conteiner"*ngFor="let item of carrinho">
+                <div class="pedido">
+                    <img class="imgPedido" src="{{item.urlImagem}}" alt="img">
+                    <div class="detalhe_pedido">
+                        <h2>{{item.nome}}</h2>
+                   
+                    </div>
+                    <!-- <div class="remover-item">
+                        <button (click)="removerItemCarrinho()" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABCElEQVR4nNWUMWoCYRCFv8Y0YpMcIQYEsQy5gR5BrRKEgOIJTE4Qj6AB0+sRNDfIFgGx0/QKpkgwRWDDwissFGd+s5AMPNjie292dv/54Y9UVkqlCsArMANKvx1+A3wCsfQB3AJtIAIGoZMlpqet4IEU79AUKFqDz/aExA6dHmqyPiL83TJFJPjSOrbYxPNigUeCq44GNXmGFrgruONocCfPgwVuCe45GvTlaVrgiuCxo8FEnrIFvhA8dzRYyHNugTPAt3Ti5JNnU73pjfIpTcyz45tWAv4Zj45T0Qo4ddw7znU3YG+oOzZzFLD5XMkUpXR3kQO+HLfoRh5XNYCVIXwJXHvD/0/9AMpTfTUFSV+XAAAAAElFTkSuQmCC" alt="full-trash"></button>
+                    </div>
+                        -->
+            
+                </div>
+            
+                <div class="container_quantidade">
+                    <div class="quantidade_button">
+                        <!-- <button (click)="remover()" id="menos">-</button> -->
+                        <p>{{item.quantidade}}</p>
+                        <!-- <button (click)="adicionar()" id="mais">+</button> -->
+            
+            
+                    </div>
+            
+                    <p>R$ {{item.preco * item.quantidade |number: '1.2-2'}}</p>
+                </div>
+            
+            </div>
+            
+        </div>
+            
+            
+
+        
+
+           
+        
+       
+    </div>
+    
+    <div 
+        class="container_finalizar-pedido">
+        
+        <div class="total-preco">
+            <p>VALOR TOTAL R$ {{totalCompra |number: '1.2-2'}}</p>
+        </div>
+
+            
+    </div>
+  
+</div>
+

@@ -36,7 +36,8 @@
 
 .imagem img{
     
-    width: 100%; /* Ajuste conforme necessário */
+    width: 15em;
+    height: 15em; /* Ajuste conforme necessário */
     display: block; /* Remove espaços extras ao redor da imagem */
 
 }

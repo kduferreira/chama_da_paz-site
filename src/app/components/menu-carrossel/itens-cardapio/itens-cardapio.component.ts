@@ -20,9 +20,15 @@ export class ItensCardapioComponent {
 
   @Input()
   preco:number=0;
+  
+  @Input()
+  urlImagem:string =''
+
+  valorTotal: number=0
 
   adicionarItem(): void {
-    const item = { id: this.idItem, nome: this.nomeItem, quantidade: 1, preco: this.preco};
+    const item = { id: this.idItem, nome: this.nomeItem, quantidade: 1,urlImagem:this.urlImagem, preco: this.preco, valorTotal:this.valorTotal};
+    
     this.localStorageService.adicionarAoCarrinho(item);
   }
 

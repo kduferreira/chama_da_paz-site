@@ -30,16 +30,23 @@ import { ItensCarrrinhoComponent } from './components/carrinho-pedidos/itens-car
 import { CardapioPageComponent } from './pages/cardapio-page/cardapio-page.component';
 import { ItensCardapioComponent } from './components/menu-carrossel/itens-cardapio/itens-cardapio.component';
 import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carrossel.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { GerenciamentoCardapioComponent } from './pages/gerenciamento-cardapio/gerenciamento-cardapio.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { CategoriaPopupComponent } from './components/popup/categoria-popup/categoria-popup.component';
+import { ItemFormPopupComponent } from './components/popup/item-form-popup/item-form-popup.component';
+import { FinalizarPedidoComponent } from './pages/finalizar-pedido/finalizar-pedido.component';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     CadastroComponent,
-    
-    
     MenuInfoComponent,
-    
     ReservarComponent,
     CardapioComponent,
     DaCasaComponent,
@@ -48,23 +55,26 @@ import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carross
     MaioresPedidosComponent,
     RodapeComponent,
     SaboresComponent,
-    
-   
     MenuLocalComponent,
-  
     MenuSocialComponent,
     LoginComponent,
     AcessoUsuarioComponent,
     CarrinhoPedidosComponent,
     MonteComponent,
     HeaderComponent,
-    
     MenuBigCardComponent,
-          MaisPedidosComponent,
-          ItensCarrrinhoComponent,
-          CardapioPageComponent,
-          ItensCardapioComponent,
-          MenuCarrosselComponent
+    MaisPedidosComponent,
+    ItensCarrrinhoComponent,
+    CardapioPageComponent,
+    ItensCardapioComponent,
+    MenuCarrosselComponent,
+    PedidosComponent,
+    GerenciamentoCardapioComponent,
+
+    CategoriaPopupComponent,
+     ItemFormPopupComponent,
+     FinalizarPedidoComponent,
+     CarrinhoComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +82,16 @@ import { MenuCarrosselComponent } from './components/menu-carrossel/menu-carross
     HttpClientModule,
     FormsModule,
     NgxMaskDirective,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    
+    
+    
+    
   ],
   providers: [provideNgxMask({})],
   bootstrap: [AppComponent]

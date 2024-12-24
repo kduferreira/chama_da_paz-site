@@ -1,0 +1,109 @@
+
+<div class="container-finalizar">
+    <div class="info-finlizar">
+        <h1 class="txt-finalizar">FINALIZAR PEDIDO</h1>
+        <hr>
+
+        <h1 class="txt-finalizar">OPÇÕES DE ENTREGA</h1>
+        <div class="opcoes-entrega"> 
+            <div 
+              class="container-entrega " 
+              [class.selecionado]="tipoEntrega === 'local'" 
+              (click)="selecionarEntrega('local')">
+              <h3>RETIRAR NO LOCAL</h3>
+              <p>tempo estimado: 10 Min</p>
+            </div>
+            <div 
+              class="container-entrega retirar-estabelecimento" 
+              [class.selecionado]="tipoEntrega === 'domicilio'" 
+              (click)="selecionarEntrega('domicilio')">
+              <h3>ENTREGA EM DOMICILIO</h3>
+              <p>tempo estimado: 10 Min</p>
+            </div>
+           
+          </div>
+          
+          <h1 class="txt-finalizar" *ngIf="tipoEntrega != 'local'">ENDEREÇO DE ENTREGA</h1>
+          <div *ngIf="tipoEntrega != 'local'" class="endereco">
+            <div class="endereco" *ngFor="let endereco of infoUser.enderecos; let i = index">
+              <div
+                class="container-entrega retirar-estabelecimento"
+                [class.selecionado]="enderecoSelecionado === endereco"
+                (click)="selecionarEndereco(endereco)"
+              >
+                <h3>{{ i === 0 ? 'Endereço principal' : 'Endereço secundário' }}</h3>
+                <p>{{ endereco.endereco }}, Nº {{ endereco.numero }}</p>
+                <p>{{ endereco.bairro }}</p>
+                <p>{{ endereco.complemento }}</p>
+                <p>tempo estimado: 10 Min</p>
+              </div>
+            </div>
+            <div class="container-entrega retirar-estabelecimento" (click)="abrirCadastroNovoEndereco()">
+              <h3>Cadastrar Novo Endereço</h3>
+              <p>Novo Endereço</p>
+            </div>
+          </div>
+
+
+        <h1 class="txt-finalizar">OBSERVAÇÕES</h1>
+
+        <textarea class="observacao" name="" id=""></textarea>
+
+        <h1 class="txt-finalizar">FORMA DE PAGAMENTO</h1>
+        <div class="pagamento">
+            <div *ngIf="tipoEntrega != 'local'" class="container-entrega-pagamento">
+                
+                <div 
+                    [class.selecionado]="formaPagemento === 'dinheiro'" 
+                    (click)="selecionarFormaPagamento('dinheiro')"
+                    class="container-entrega retirar-estabelecimento">
+                    <h3>DINHEIRO</h3>
+                    <p>Truco para</p>
+                    <input type="text">0
+
+                </div>
+                <div 
+                [class.selecionado]="formaPagemento === 'credito'" 
+                (click)="selecionarFormaPagamento('credito')"
+                    class="container-entrega retirar-estabelecimento">
+                    <h3>Cartao de Crédito</h3>
+                    <p>(Entregador)</p>
+                </div>
+                <div 
+                [class.selecionado]="formaPagemento === 'debito'" 
+                (click)="selecionarFormaPagamento('debito')"
+                    class="container-entrega retirar-estabelecimento">
+                    <h3>Cartão de Débito</h3>
+                    <p>(Entregador)</p>
+                </div>
+                <div 
+                [class.selecionado]="formaPagemento === 'pix'" 
+                (click)="selecionarFormaPagamento('pix')"
+                class="container-entrega retirar-estabelecimento">
+                    
+                <h3>Pix</h3>
+                    
+                </div>
+            </div>
+            <div 
+                [class.selecionado]="tipoEntrega === 'local'" 
+                                
+                *ngIf="tipoEntrega == 'local'" class="container-entrega retirar-estabelecimento">
+                <h3>Pagar no Estabelecimento</h3>
+                
+            </div>
+
+        </div>
+
+        <div class="finalizar">
+            <button>COMPRAR MAIS</button>
+            <button>FINALIZAR PEDIDO</button>
+
+        </div>
+
+    </div>
+
+    <div class="carrinho">
+        <app-carrinho></app-carrinho>
+    </div>
+</div>

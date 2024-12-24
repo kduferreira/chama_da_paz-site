@@ -1,0 +1,87 @@
+
+.container-finalizar{
+    display:flex;
+    flex-direction: row;
+    padding: 1em;
+  
+}
+.info-finlizar{
+    width: 65%;
+}
+
+.txt-finalizar{
+    margin-bottom: 0.5em;
+}
+
+.carrinho{
+    width: 30%;
+}
+
+.opcoes-entrega{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-entrega{
+    border: 1px solid #ccc;
+    padding: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0.8em;
+    width: 15em;
+
+    height: 8em;
+    border-radius: 5px;
+}
+
+
+  
+.endereco{
+    display: flex;
+    flex-direction: row;
+}
+
+.observacao{
+    width: 40em;
+    height: 10em;
+    margin-bottom: 1em;
+}
+
+.pagamento{
+    display: flex;
+    flex-direction: row;
+}
+.container-entrega-pagamento{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+  .container-entrega:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selecionado {
+    border: 2px solid #00c3ff;
+    background-color: #e6f7ff;
+    box-shadow: 0 0 5px #00c3ff;
+  }
+
+  .finalizar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  }
+
+  .finalizar button{
+    padding: 1em 0.5em;
+    margin: 1em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
