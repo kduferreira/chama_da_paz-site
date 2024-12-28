@@ -25,7 +25,14 @@ export class PedidoService {
 
  
   buscarPedidos(): Observable<any> {
-    return this.http.get(this.apiUrl);
+    const url = `${this.apiUrl}/admin/pedido`;
+
+    const headers = this.token 
+    ? { Authorization: `${this.token}` } 
+    : undefined;
+
+
+    return this.http.get(url, {headers});
   }
 
 
