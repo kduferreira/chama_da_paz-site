@@ -29,7 +29,7 @@ pedido = {
   numero:"",
   complemento:"",
 
-  formaPagamento:"dinheiro",
+  formaPagamento:"estabelecimento",
   troco:"",
   retirarLocal:true,
 
