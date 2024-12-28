@@ -9,10 +9,10 @@ export class LocalStorageService {
   constructor() {}
 
 
-  adicionarAoCarrinho(item: { id: number; nome: string; quantidade: number;urlImagem:string; preco: number; valorTotal:number }): void {
+  adicionarAoCarrinho(item: { idItem: number; nome: string; quantidade: number;urlImagem:string; preco: number; valorTotal:number }): void {
     let carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
 
-    const itemExistente = carrinho.find((produto: any) => produto.id === item.id);
+    const itemExistente = carrinho.find((produto: any) => produto.id === item.idItem);
     if (itemExistente) {
       itemExistente.quantidade += item.quantidade;
     } else {

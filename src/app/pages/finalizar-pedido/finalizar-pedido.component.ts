@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalStorageService } from 'src/app/service/LocalStorageService';
+import { PedidoService } from 'src/app/service/PedidoService';
 import { UsuarioService } from 'src/app/service/UsuarioService';
 
 @Component({
@@ -9,7 +10,10 @@ import { UsuarioService } from 'src/app/service/UsuarioService';
 })
 export class FinalizarPedidoComponent {
 
-constructor(private usuarioService:UsuarioService, private localStorageService:LocalStorageService){}
+constructor(private usuarioService:UsuarioService, 
+  private localStorageService:LocalStorageService,
+  private pedidoService:PedidoService
+){}
 
 
 infoUser:any
@@ -32,6 +36,7 @@ pedido = {
   formaPagamento:"estabelecimento",
   troco:"",
   retirarLocal:true,
+  deliveryFrete:0,
 
   itensPedido: [] as any[]
 }
@@ -121,11 +126,21 @@ ngOnInit(): void {
 
 
 
-  finalizarPedido(){
-    console.log(this.pedido);
-    
-  }
 
+
+  async salvarPedido(): Promise<void> {
+    console.log(this.pedido);
+    this.pedidoService.salvarNovoPedido(this.pedido).subscribe(
+     { next: (response) => {
+        console.log('Pedido feito:', response);
+      
+  
+      },
+      error: (err) => {
+        console.error('Erro ao concluir pedido', err);
+      },}
+    );
+  }
 
 
 

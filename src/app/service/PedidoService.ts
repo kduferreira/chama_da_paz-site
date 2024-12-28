@@ -6,14 +6,30 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PedidoService {
-  private apiUrl = 'https://pastelariaapi.onrender.com/api/pedido';
+  private apiUrl = 'https://pastelariaapi.onrender.com';
 
   constructor(private http: HttpClient) {}
+  private token = localStorage.getItem('token');
+
+
+  salvarNovoPedido(pedido: any): Observable<any> {
+    const headers = this.token 
+    ? { Authorization: `${this.token}` } 
+    : undefined;
+
+
+    const url = `${this.apiUrl}/user/pedido`;
+    
+    return this.http.post(url, pedido,{ headers });
+  }
 
  
   buscarPedidos(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+
+
+
 
 
 }
