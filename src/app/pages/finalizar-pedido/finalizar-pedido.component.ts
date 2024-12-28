@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocalStorageService } from 'src/app/service/LocalStorageService';
 import { UsuarioService } from 'src/app/service/UsuarioService';
 
 @Component({
@@ -8,7 +9,7 @@ import { UsuarioService } from 'src/app/service/UsuarioService';
 })
 export class FinalizarPedidoComponent {
 
-constructor(private usuarioService:UsuarioService){}
+constructor(private usuarioService:UsuarioService, private localStorageService:LocalStorageService){}
 
 
 infoUser:any
@@ -20,10 +21,35 @@ infoUser:any
   formaPagemento:string = "dinheiro"
 
   enderecoSelecionado:string = "principal"
-//  enderecoSelecionado: any = null; // Variável para armazenar o endereço selecionado
-  ngOnInit(): void {
+ 
+pedido = {
+  observacoes:"",
+  endereco:"",
+  bairro:"",
+  numero:"",
+  complemento:"",
+
+  formaPagamento:"dinheiro",
+  troco:"",
+  retirarLocal:true,
+
+  itensPedido: [] as any[]
+}
+
+
+ngOnInit(): void {
    
    this.buscarInfoUser()
+  
+  
+  const itens = this.localStorageService.mostrarCarrinho()
+
+
+
+  
+  itens.forEach((objetos)=>{
+    this.pedido.itensPedido.push(objetos)
+  })
   
  
    
@@ -34,25 +60,33 @@ infoUser:any
 
 
   selecionarEntrega(tipo: string): void {
+
+
+    if(tipo != "local"){
+      this.pedido.retirarLocal = false
+    }else{
+      this.pedido.retirarLocal = true
+    }
+   
     this.tipoEntrega = tipo;
     console.log(`Entrega selecionada: ${this.tipoEntrega}`);
   }
 
 
  
-  infoEndereco = {
-    enderecos: [
-      { endereco: 'Rua A', numero: 123, bairro: 'Centro', complemento: 'Apt 101' },
-      { endereco: 'Rua B', numero: 456, bairro: 'Bairro Novo', complemento: 'Casa' },
-      // Adicione outros endereços aqui
-    ]
-  };
+
 
   selecionarEndereco(endereco: any): void {
-   
-    
+
    
     this.enderecoSelecionado = endereco;
+
+
+    this.pedido.endereco = endereco.endereco
+    this.pedido.bairro = endereco.bairro
+    this.pedido.complemento = endereco.complemento
+    this.pedido.numero = endereco.numero
+
     console.log('Endereço selecionado:', endereco);
   }
 
@@ -63,6 +97,8 @@ infoUser:any
 
   selecionarFormaPagamento(pagamento: string): void {
     this.formaPagemento = pagamento;
+
+    this.pedido.formaPagamento = pagamento
     console.log(`Forma de pagamento: ${this.formaPagemento}`);
   }
 
@@ -81,6 +117,13 @@ infoUser:any
         console.error('Erro ao buscar info usuario:', erro); // Tratamento de erros
       }
     );
+  }
+
+
+
+  finalizarPedido(){
+    console.log(this.pedido);
+    
   }
 
 
