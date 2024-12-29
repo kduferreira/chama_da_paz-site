@@ -74,8 +74,8 @@
 
         <div class="forma_pagamento">
             <h3>Forma de pagamento</h3>
-            <p>dinheiro</p>
-            <p>troca para</p>
+            <p><span class="titulos">Forma de Pagamento:</span> {{pedidoSelecionado.formaPagamento}}</p>
+            <p *ngIf="pedidoSelecionado.formaPagamento == 'Dinheiro'"><span class="titulos">Troco para:</span> R$ {{pedidoSelecionado.troco | number: '1.2-2'}}</p>
         </div>
 
 
@@ -83,9 +83,10 @@
             <h2>Pedidos</h2>
 
             <div class="item"  *ngFor="let item of pedidoSelecionado.itensPedido">
-                <p>{{item.nome}}</p>
-                <p>{{item.quantidade}}</p>
-                <p>{{item.precoTotal | number: '1.2-2'}}</p>
+                <p><span class="titulos">Item:</span>  {{item.nome}}</p>
+                <p><span class="titulos">Quantidade:</span>  {{item.quantidade}}</p>
+                <p><span class="titulos">Preço Unitaria:</span> R$ {{item.precoUnitario | number: '1.2-2'}}</p>
+                <p> <span class="titulos">Preço Total:</span> R$ {{item.precoTotal | number: '1.2-2'}}</p>
             </div>
 
         </div>
