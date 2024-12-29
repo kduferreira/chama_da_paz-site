@@ -33,11 +33,11 @@
                 <p>{{pedidoSelecionado.usuario.telefone}}</p>
             </div>
 
-            <p>{{pedidoSelecionado.idPedido}}</p>
+            <p><span class="titulos">ID do Pedido: </span>{{pedidoSelecionado.idPedido}}</p>
 
             <div class="data">
-                <p>{{pedidoSelecionado.dataPedido | date:'dd/MM/yyyy'}}</p>
-                <p>{{pedidoSelecionado.dataPedido | date:'HH:mm': 'America/Sao_Paulo'}}</p>
+                <p><span class="titulos">Data Pedido: </span>{{pedidoSelecionado.dataPedido | date:'dd/MM/yyyy'}}</p>
+                <p><span class="titulos">Horario do Pedido: </span>{{pedidoSelecionado.dataPedido | date:'HH:mm': 'America/Sao_Paulo'}}</p>
             </div>
 
             <div class="button-iniciar">
