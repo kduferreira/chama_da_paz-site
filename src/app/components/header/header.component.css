@@ -1,6 +1,6 @@
 /* Estilos base */
 .container-header {
-    color: #fff;
+    color: #fffff0;
   }
   
   .navbar {
@@ -24,7 +24,7 @@
   
   .menu-left li a,
   .menu-right li a {
-    color: #fff;
+    color: #fffff0;
     text-decoration: none;
     font-size: 18px;
   }

@@ -7,9 +7,9 @@
     margin-bottom: 2em;
     font-family: "Oleo Script", system-ui;
     font-size: 30px;
-    font-weight: bold;
+   
     font-style: normal;  
-    color: white;  
+    color: #fffff0;  
 }
 
 .button-pedido button{
