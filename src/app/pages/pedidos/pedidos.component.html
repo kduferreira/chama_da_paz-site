@@ -10,7 +10,7 @@
             >
 
             <div class="status">
-                <h2>{{pedido.status}}</h2>
+                <h2>{{pedido.statusPedido}}</h2>
 
                 <p>{{pedido.idPedido}}</p>
             </div>
@@ -33,11 +33,11 @@
                 <p>{{pedidoSelecionado.usuario.telefone}}</p>
             </div>
 
-            <p>{{pedidoSelecionado.idPedido}}</p>
+            <p><span class="titulos">ID do Pedido: </span>{{pedidoSelecionado.idPedido}}</p>
 
             <div class="data">
-                <p>{{pedidoSelecionado.dataPedido | date:'dd/MM/yyyy'}}</p>
-                <p>{{pedidoSelecionado.dataPedido | date:'HH:mm': 'America/Sao_Paulo'}}</p>
+                <p><span class="titulos">Data Pedido: </span>{{pedidoSelecionado.dataPedido | date:'dd/MM/yyyy'}}</p>
+                <p><span class="titulos">Horario do Pedido: </span>{{pedidoSelecionado.dataPedido | date:'HH:mm': 'America/Sao_Paulo'}}</p>
             </div>
 
             <div class="button-iniciar">
@@ -49,22 +49,22 @@
         <div class="local">
             <div class="endereco">
                 <h3>Endereço </h3>
-                <p>{{pedidoSelecionado.usuario.endereco}}</p>
+                <p>{{pedidoSelecionado.endereco}}</p>
             </div>
 
             <div class="endereco">
                 <h3>Bairro </h3>
-                <p>{{pedidoSelecionado.usuario.bairro}}</p>
+                <p>{{pedidoSelecionado.bairro}}</p>
             </div>
 
             <div class="endereco">
                 <h3>Numero Residencia </h3>
-                <p>{{pedidoSelecionado.usuario.numero}}</p>
+                <p>{{pedidoSelecionado.numero}}</p>
             </div>
 
             <div class="endereco">
                 <h3>Complemento </h3>
-                <p>{{pedidoSelecionado.usuario.complemento}}</p>
+                <p>{{pedidoSelecionado.complemento}}</p>
             </div>
            
 
@@ -74,8 +74,8 @@
 
         <div class="forma_pagamento">
             <h3>Forma de pagamento</h3>
-            <p>dinheiro</p>
-            <p>troca para</p>
+            <p><span class="titulos">Forma de Pagamento:</span> {{pedidoSelecionado.formaPagamento}}</p>
+            <p *ngIf="pedidoSelecionado.formaPagamento == 'Dinheiro'"><span class="titulos">Troco para:</span> R$ {{pedidoSelecionado.troco | number: '1.2-2'}}</p>
         </div>
 
 
@@ -83,9 +83,10 @@
             <h2>Pedidos</h2>
 
             <div class="item"  *ngFor="let item of pedidoSelecionado.itensPedido">
-                <p>{{item.nome}}</p>
-                <p>{{item.quantidade}}</p>
-                <p>{{item.precoTotal | number: '1.2-2'}}</p>
+                <p><span class="titulos">Item:</span>  {{item.nome}}</p>
+                <p><span class="titulos">Quantidade:</span>  {{item.quantidade}}</p>
+                <p><span class="titulos">Preço Unitaria:</span> R$ {{item.precoUnitario | number: '1.2-2'}}</p>
+                <p> <span class="titulos">Preço Total:</span> R$ {{item.precoTotal | number: '1.2-2'}}</p>
             </div>
 
         </div>

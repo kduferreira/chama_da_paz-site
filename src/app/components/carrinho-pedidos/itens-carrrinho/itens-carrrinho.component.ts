@@ -14,7 +14,7 @@ export class ItensCarrrinhoComponent {
   constructor(private localStorageService:LocalStorageService){}
 
   @Input()
-  id:number=0
+  idItem:number=0
   @Input()
   quantidade: number = 0;
   @Input()
@@ -42,8 +42,9 @@ export class ItensCarrrinhoComponent {
   adicionar():void{
     this.quantidade++;
     this.precoTotal = this.precoItem * this.quantidade
-
-    this.localStorageService.atualizarItem(this.id, this.quantidade, this.precoTotal)
+  
+    
+    this.localStorageService.atualizarItem(this.idItem, this.quantidade, this.precoTotal)
     this.enviarDadosPedido()
     
   }
@@ -53,7 +54,7 @@ export class ItensCarrrinhoComponent {
       this.quantidade--;
       this.precoTotal = this.precoItem * this.quantidade
 
-      this.localStorageService.atualizarItem(this.id, this.quantidade,this.precoTotal)
+      this.localStorageService.atualizarItem(this.idItem, this.quantidade,this.precoTotal)
       this.enviarDadosPedido()
       
     }if (this.quantidade === 0) {
@@ -62,7 +63,7 @@ export class ItensCarrrinhoComponent {
   }
  
   removerItemCarrinho():void{
-    this.localStorageService.removerDoCarrinho(this.id)
+    this.localStorageService.removerDoCarrinho(this.idItem)
     this.enviarDadosPedido()
     
     this.recarregarPagina()

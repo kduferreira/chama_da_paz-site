@@ -9,10 +9,10 @@ export class LocalStorageService {
   constructor() {}
 
 
-  adicionarAoCarrinho(item: { id: number; nome: string; quantidade: number;urlImagem:string; preco: number; valorTotal:number }): void {
+  adicionarAoCarrinho(item: { idItem: number; nome: string; quantidade: number;urlImagem:string; preco: number; valorTotal:number }): void {
     let carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
 
-    const itemExistente = carrinho.find((produto: any) => produto.id === item.id);
+    const itemExistente = carrinho.find((produto: any) => produto.idItem === item.idItem);
     if (itemExistente) {
       itemExistente.quantidade += item.quantidade;
     } else {
@@ -40,7 +40,7 @@ export class LocalStorageService {
     let carrinho =  this.mostrarCarrinho();
   
     // Filtra os itens, removendo aquele com o ID correspondente
-    carrinho = carrinho.filter((produto: any) => produto.id !== id);
+    carrinho = carrinho.filter((produto: any) => produto.idItem !== id);
   
     // Atualiza o Local Storage com o carrinho atualizado
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
@@ -54,7 +54,7 @@ export class LocalStorageService {
 
    
     // Encontra o produto com o ID correspondente
-    const indiceProduto = carrinho.findIndex((produto) => (produto.id) === id);
+    const indiceProduto = carrinho.findIndex((produto) => (produto.idItem) === id);
 
      
     if(quantidade == 0){
@@ -88,7 +88,7 @@ export class LocalStorageService {
     // Obtém o carrinho do Local Storage
     let carrinho  = this.mostrarCarrinho();
 
-    carrinho = carrinho.filter((produto: any) => produto.id == id);
+    carrinho = carrinho.filter((produto: any) => produto.idItem == id);
     
     if(quantidade == 0){
       console.log("removendo");

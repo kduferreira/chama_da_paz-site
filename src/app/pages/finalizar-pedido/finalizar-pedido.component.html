@@ -47,7 +47,7 @@
 
         <h1 class="txt-finalizar">OBSERVAÇÕES</h1>
 
-        <textarea class="observacao" name="" id=""></textarea>
+        <textarea [(ngModel)]="pedido.observacoes" class="observacao" name="" id=""></textarea>
 
         <h1 class="txt-finalizar">FORMA DE PAGAMENTO</h1>
         <div class="pagamento">
@@ -59,7 +59,7 @@
                     class="container-entrega retirar-estabelecimento">
                     <h3>DINHEIRO</h3>
                     <p>Truco para</p>
-                    <input type="text">0
+                    <input type="text" [(ngModel)]="pedido.troco">
 
                 </div>
                 <div 
@@ -97,7 +97,7 @@
 
         <div class="finalizar">
             <button>COMPRAR MAIS</button>
-            <button>FINALIZAR PEDIDO</button>
+            <button (click)="salvarPedido()">FINALIZAR PEDIDO</button>
 
         </div>
 

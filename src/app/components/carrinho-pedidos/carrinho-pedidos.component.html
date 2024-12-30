@@ -18,7 +18,7 @@
                 <app-itens-carrrinho (totalCompra)="receberTotalCompra($event)"
              
                 *ngFor="let item of carrinho"
-                [id]="item.id"
+                [idItem]="item.idItem"
                 [quantidade]="item.quantidade"
                 [precoItem]="item.preco"
                 [nomeItem]="item.nome"
