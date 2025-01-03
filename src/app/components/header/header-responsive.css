@@ -30,7 +30,16 @@
     .navbar {
       margin: 0 1em; /* Ajusta a margem em dispositivos móveis */
     }
-  
+    #desktop{
+      display: none;
+    }
+    #mobile{
+
+      display: block;
+    }
+    .mobile-menu-icon {
+      display: block;
+    }
     .navbar .menu-left,
     .navbar .menu-right {
       flex-direction: column;
@@ -79,6 +88,37 @@
     .navbar .menu-left li,
     .navbar .menu-right li {
       margin: 0.5em 0;
+    }
+
+    #mobile{
+
+      display: block;
+    }
+
+    .mobile-menu-icon button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 0.5rem;
+    }
+    .mobile-menu .nav-item {
+      display: block;
+      padding-top: 1.2rem;
+    }
+  
+    .open {
+      display: block;
+    }
+  
+    .white-row {
+      display: grid;
+      color: white;
     }
   }
   

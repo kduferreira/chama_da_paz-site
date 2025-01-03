@@ -2,7 +2,12 @@
 .container-header {
     color: #fffff0;
   }
-  
+  #desktop{
+    display: block;
+  }
+  #mobile{
+    display: none;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -33,6 +38,19 @@
     max-width: 120px;
   }
   
+
+  #especial {
+    background: linear-gradient(90deg, var(--fade-color1), var(--fade-color2)67%);
+    border-radius: 20px;
+    padding: 4px 20px;
+    transition: 0.5s;
+  
+  }
+  
+  #especial:hover{
+    cursor: pointer;
+    filter: brightness(1.2)
+  }
   /* Menu Mobile */
   .mobile-menu-icon {
     display: none;
@@ -43,9 +61,13 @@
   
   .mobile-menu {
     display: none;
-    background-color: #333;
-    padding: 0.5rem; /* Reduz o preenchimento interno para aproximar mais o menu do topo */
-  }
+    position: absolute; /* Faz o menu flutuar acima do conteúdo */
+  top: 28%;
+  left: 0;
+  width: 100%;
+  background-color: #1E1E1C;
+  z-index: 1; /* Garante que o menu fique acima de outros elementos */
+  padding: 1rem 0;}
   
   /* Quando o menu está aberto */
   .mobile-menu.open {
@@ -64,6 +86,7 @@
   .mobile-menu ul li a {
     color: #fff;
     font-size: 16px;
+    text-decoration: none;
   }
   
   /* Responsividade */

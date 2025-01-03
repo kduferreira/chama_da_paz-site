@@ -12,9 +12,9 @@
 
     <!-- Logo -->
     <div class="logo">
-      <img src="../../../assets/images/chama-logo.png" alt="Logo">
+      <img src="../../../assets/images/chama-logo.png"  id="desktop"  alt="Logo">
     </div>
-
+    <a class="logo-options__image" id="mobile" href="/"><img src="../../../assets/images/chama-logo.png" alt=""></a>
         
 
 
@@ -25,10 +25,23 @@
       
     </ul>
 
-
+    <div class="mobile-menu-icon">
+      <button (click)="menuShow()"><img class="icon" src="../../../assets/images/button/menu_white_36dp.svg" alt=""></button>
+    </div>
   </nav>
 
+  <div class="mobile-menu">
+    <ul >
+      <li class="nav-item"><a class="nav-link" (click)="toBeneficios()" routerLink="active">Home</a></li>
+      <li class="nav-item"><a class="nav-link" (click)="toBeneficios()" routerLink="/cardapio">Menu</a></li>
+      <li class="nav-item"><a class="nav-link" (click)="toFuncionalidades()" routerLink="active">Contato</a></li>
+      <li class="nav-item"><a class="nav-link" (click)="toFeedbacks()" routerLink="/pedidos">🛒 Meus pedidos</a></li>
+      <li  class="nav-item" ><a id="especial" class="nav-link"    (click)="toPlanos()" routerLink="/cadastro">Entrar/Registrar</a></li>
      
+
+      
+    </ul>
+    </div>
 
 
 
